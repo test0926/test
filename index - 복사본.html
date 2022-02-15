@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="code" charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no"/>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="evolution.js"></script>
+	<title>디지몬 슈퍼럼블 인포</title>
+</head>
+<body>
+	<header>
+		<ul class="gnb">
+			<li>인포</li>
+		</ul>
+	</header>
+	<div id="container">
+<!-- 		<nav>
+			<ul>
+				<li><a href="">진화트리</a></li>
+				<li><a href="">맵</a></li>
+			</ul>
+		</nav> -->
+		<div class="content">
+			<section class="section-area evolution">
+				<ul class="evolution-select-area">
+					<li>
+						<div class="checkBOX">
+							<input type="radio" name="evolution" value="all" class="typeSelector" checked>
+							<label>전체</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkBOX">
+							<input type="radio" name="evolution" value="유년기" class="typeSelector">
+							<label>유년기</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkBOX">
+							<input type="radio" name="evolution" value="성장기" class="typeSelector">
+							<label>성장기</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkBOX">
+							<input type="radio" name="evolution" value="성숙기" class="typeSelector">
+							<label>성숙기</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkBOX">
+							<input type="radio" name="evolution" value="완전체" class="typeSelector">
+							<label>완전체</label>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="section-area">
+				<article class="search-area">
+					<input type="search" name="" placeholder="검색" id="text" list="digimon-options" />
+				</article>
+				<article id="result">
+					<div class="total">0개</div>
+				</article>
+				<article id="digimonList"></article>
+				<script type="text/javascript">allDigimon()</script>
+			</section>
+			<section class="section-area" style="display: none">
+				<article class="select-info-area" style="">
+					<div class="imgBox"></div>
+					<div class="textBox">
+						<h5 class="dg-name"><em>포요몬</em></h5>
+						<div class="field-group">
+							<div class="field">
+								<div>속성</div>
+								<div>데이터<em>(Da)</em></div>
+							</div>
+							<div class="field">
+								<div>필드</div>
+								<div></div>
+							</div>
+						</div>
+						<div class="field-group">
+							<div class="field">
+								<div>기타</div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article >
+					<h5 class="section-title">진화루트</h5>
+					<ul class="evolution-list-area2">
+						<li>
+							<p class="tit">진화트리 1</p>
+							<ul>
+								<li>
+									<p class="tit">유년기</p>
+									<p>토코몬</p>
+								</li>
+								<li>
+									<p class="tit">성장기</p>
+									<p>파닥몬</p>
+								</li>
+								<li>
+									<p class="tit">성숙기</p>
+									<p>엔젤몬</p>
+								</li>
+								<li>
+									<p class="tit">완전체</p>
+									<p>홀리엔젤몬</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="tit">진화트리 2</p>
+							<ul>
+								<li>
+									<p class="tit">유년기</p>
+									<p>토코몬</p>
+								</li>
+								<li>
+									<p class="tit">성장기</p>
+									<p>피코데블몬</p>
+								</li>
+								<li>
+									<p class="tit">성숙기</p>
+									<p>데블몬</p>
+								</li>
+								<li>
+									<p class="tit">완전체</p>
+									<p>묘티스몬</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="tit">진화트리 3</p>
+							<ul>
+								<li>
+									<p class="tit">유년기</p>
+									<p>유라몬</p>
+								</li>
+								<li>
+									<p class="tit">성장기</p>
+									<p>텐타몬</p>
+								</li>
+								<li>
+									<p class="tit">성숙기</p>
+									<p>캅테리몬</p>
+								</li>
+								<li>
+									<p class="tit">완전체</p>
+									<p>묘티스몬</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</article>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
