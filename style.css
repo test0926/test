@@ -447,10 +447,10 @@
         top: -50%;
         height: 100%;
     }
-    .evolution-list-area2 .diginame {
+    .evolution-list-area2 .digiInfo {
         position: relative;
     }
-    .evolution-list-area2 .diginame .digitype {
+    .evolution-list-area2 .digiInfo .digitype {
         font-size: 12px;
         letter-spacing: 1px;
     }
