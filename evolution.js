@@ -699,7 +699,7 @@ $( function(){
 				var color =  dataTypeColor(digitype);
 				console.log(color);
 				quickHtml += '<li><div>\
-								<p class="diginame" style="background-color:'+color+'">'+data.tree[i]+'</p>\
+								<p class="diginame">'+data.tree[i]+'</p>\
 							</div>';
 
 				html += '<li><div>\
