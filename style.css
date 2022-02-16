@@ -450,7 +450,7 @@
     .evolution-list-area2 .diginame {
         position: relative;
     }
-    .evolution-list-area2 .diginame span {
+    .evolution-list-area2 .diginame .digitype {
         font-size: 12px;
         letter-spacing: 1px;
     }

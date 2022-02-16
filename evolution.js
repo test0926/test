@@ -618,7 +618,7 @@ $( function(){
 		showList(false);
 	});
 
-	$(document).on('click', '.diginame', function(){
+	$(document).on('click', '.diginame .name', function(){
 		let name = $(this).text();
 		$('#digimon .name span:first-child').text(name);
 		getDigimon(name);
@@ -683,6 +683,8 @@ $( function(){
 		let data = digimonInfo(name);
 		var html = ''
 		var quickHtml = '';
+		console.log(name);
+
 		var type =	thisType(data.type);
 		var color = dataTypeColor(data.dataType);
 		$('#digimon .name span:last-child').html('<em style="color:'+color+'">'+data.dataType+'</em>');
@@ -705,7 +707,7 @@ $( function(){
 				html += '<li><div>\
 							<p class="tit">'+ type +'</p>\
 							<p class="diginame">\
-								'+data.tree[i]+'\
+								<span class="name">'+data.tree[i]+'</span>\
 								<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
 							</p>\
 						</div>';
@@ -734,7 +736,7 @@ $( function(){
 
 				html += '<div>\
 							<p class="diginame">\
-								'+data.tree[i]+'\
+								<span class="name">'+data.tree[i]+'</span>\
 								<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
 							</p>\
 						</div>';
