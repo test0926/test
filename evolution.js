@@ -531,6 +531,7 @@ $( function(){
 	function getDigimon(name){
 		let data = digimonInfo(name);
 		var html = ''
+		var quickHtml = '';
 		var type =	thisType(data.type);
 
 		if(data.tree[0] == '미구현'){ // 진화트리가 없을경우
@@ -539,8 +540,12 @@ $( function(){
 							<p class="tit">'+ type +'</p>\
 							<p>'+data.tree[0]+'</p>\
 					</div></li>';
+
 		} else { // 진화트리가 있을때
 			for(var i = 0; i < data.tree.length; i++){
+				quickHtml += '<li><div>\
+								<p class="diginame">'+data.tree[i]+'</p>\
+							</div>';
 
 				html += '<li><div>\
 							<p class="tit">'+ type +'</p>\
@@ -555,6 +560,7 @@ $( function(){
 				html += '</li>';
 			}
 		}
+		$('#fastRoot ul').html(quickHtml);
 		$('.evolution-list-area2').html(html);
 	}
 

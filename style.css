@@ -469,6 +469,30 @@
         color: rgb(78, 65, 219);
     }
 
+    #fastRoot {
+        padding-top: 15px;
+    }
+    #fastRoot ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #fastRoot li {
+        margin-right: 10px;
+    }
+    #fastRoot li p {
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: #4e4b6e;
+        color: #fff;
+        font-weight: 500;
+    }
+     #fastRoot li p:hover {
+        background-color: rgb(78, 65, 219);
+        color: #fff;
+     }
+
 @media(max-width:1200px) {
     header {
         justify-content: center;
