@@ -9,7 +9,7 @@ const Evolution = {
 		'쉬라몬','에렉몬','피요몬','울퉁몬','텐타몬','톱니몬','기자몬','팔몬',
 		'머슈몬','플롯트몬','레나몬','케라몬','아기벌몬','파닥몬',
 		'그레이몬','다크티라노몬','메탈그레이몬','스컬그레이몬','가루몬','워가루몬',
-		'구리몬','니드몬','릴리몬','버드라몬','꼬끼몬','엔젤몬','홀리엔젤몬','묘티스몬',
+		'두리몬','니드몬','릴리몬','버드라몬','꼬끼몬','엔젤몬','홀리엔젤몬','묘티스몬',
 		'가트몬','엔젤우몬','캅테리몬','아트라캅테리몬','스콜피오몬','쿠가몬','원뿔몬','모털몬','쥬드몬',
 		'시드라몬','쉘몬','말벌몬','프리지몬','퍼펫몬','우드몬','데이터몬','안드로몬','켄터스몬','가드로몬','메카노몬',
 		'우가몬','데블몬','레오몬','모노크로몬','메라몬','고스몬','소울몬','데드메라몬','워매몬','에테몬','스카몬','레어몬',
@@ -34,7 +34,7 @@ const Evolution = {
 			},
 			하얀몬 : {
 				type : '유년기1',
-				tree : ['냐옹몬','뿔몬'],
+				tree : ['야옹몬','뿔몬'],
 			},
 			유라몬 : {
 				type : '유년기1',
@@ -55,11 +55,11 @@ const Evolution = {
 			// 유년기2
 			코로몬 : {
 				type : '유년기2',
-				tree : ['아구몬', '피코데믈몬','고부리몬','캔들몬','츄몬','베타몬','파피몬'],
+				tree : ['아구몬', '피코데블몬','고부리몬','캔들몬','츄몬','베타몬','파피몬'],
 			},
 			뿔몬 : {
 				type : '유년기2',
-				tree : ['베타몬', '쉬라몬','고부리몬','피코데믈몬','파피몬','에렉몬'],
+				tree : ['베타몬', '쉬라몬','고부리몬','피코데블몬','파피몬','에렉몬'],
 			},
 			모티몬 : {
 				type : '유년기2',
@@ -174,7 +174,7 @@ const Evolution = {
 			},
 			츄몬 : {
 				type : '성장기',
-				tree : ['워메몬','스카몬','레어몬'],
+				tree : ['워매몬','스카몬','레어몬'],
 			},
 			가지몬 : {
 				type : '성장기',
@@ -198,7 +198,7 @@ const Evolution = {
 				type : '성숙기',
 				tree : ['메탈그레이몬','스컬그레이몬'],
 			},
-			다크디라모몬 : {
+			다크티라노몬 : {
 				type : '성숙기',
 				tree : ['메탈그레이몬','스컬그레이몬'],
 			},
@@ -314,7 +314,7 @@ const Evolution = {
 				type : '성숙기',
 				tree : ['미구현'],
 			},
-			워메몬 : {
+			워매몬 : {
 				type : '성숙기',
 				tree : ['퍼펫몬','에테몬'],
 			},
@@ -331,6 +331,14 @@ const Evolution = {
 				tree : ['미구현'],
 			},
 			꼬끼몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+			},
+			두리몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+			},
+			소울몬 : {
 				type : '성숙기',
 				tree : ['미구현'],
 			},
@@ -408,12 +416,6 @@ const Evolution = {
 	}
 };
 
-
-function setOption(){
-	html = '';
-	console.log(Evolution.tree.first['깜몬']);
-}
-
 function allDigimon(){
 	let $el = $('#digimonList');
 	let arr = Evolution.all_Digimon;
@@ -470,26 +472,127 @@ $( function(){
 	$('.typeSelector').change( function(){
 		var val = $(this).val();
 		selectDigimon(val);
+		showList(true);
 	});
 
 	$(document).on('change', '.digimon', function(){
 		let name = $(this).val();
-		digimonInfo(name)
+		$('#digimon .name').text(name);
+		getDigimon(name);
+		showList(false);
 	});
 
+	$(document).on('click', '.diginame', function(){
+		let name = $(this).text();
+		$('#digimon .name').text(name);
+		getDigimon(name);
+		showList(false);
+	});
+
+	$(document).on('hover', '.diginame', function(){
+		console.log(data);
+		let name = $(this).text();
+		var data = digimonInfo(name);
+	});
+
+	$('#close').click( function(){
+		$('#digimonList input').prop("checked", false);
+		$('#digimonList .checkBOX').show();
+		showList(true);
+	});
+
+	function showList(type){
+		if(type){
+			$('#digimon').hide();
+			$('#digimonList').show();
+			$('.search-area').show();
+			$('#select-digimon').hide();
+		}else {
+			$('#digimon').show();
+			$('#digimonList').hide();
+			$('.search-area').hide();
+			$('#select-digimon').show();
+		}
+		$('#text').val('');
+	}
+
+
+	// 디지몬 정보
 	function digimonInfo(name){
 		for (key in Evolution.tree) { 
 			if(Evolution.tree[key][name]){
-				var data = Evolution.tree[key][name].tree;
-				console.log(data);
+				var data = Evolution.tree[key][name];
+				return data;
 			}
 		}
 	}
 
-	function nextTree(name, obj){
 
+	function getDigimon(name){
+		let data = digimonInfo(name);
+		var html = ''
+		var type =	thisType(data.type);
+
+		if(data.tree[0] == '미구현'){ // 진화트리가 없을경우
+
+			html = '<li><div>\
+							<p class="tit">'+ type +'</p>\
+							<p>'+data.tree[0]+'</p>\
+					</div></li>';
+		} else { // 진화트리가 있을때
+			for(var i = 0; i < data.tree.length; i++){
+
+				html += '<li><div>\
+							<p class="tit">'+ type +'</p>\
+							<p class="diginame">'+data.tree[i]+'</p>\
+						</div>';
+
+
+				var nextTree = digimonInfo(data.tree[i]);
+				if(nextTree){
+					html +=  chainTree(nextTree);		
+				}
+				html += '</li>';
+			}
+		}
+		$('.evolution-list-area2').html(html);
 	}
 
+
+	function chainTree(data){
+		var type =	thisType(data.type);
+		var html = '';
+		if(data.tree[0] != '미구현'){
+			html = '<div class="next"><p class="tit">'+ type +'</p>';
+			for(var i = 0; i < data.tree.length; i++){
+					html += '<div>\
+								<p class="diginame">'+data.tree[i]+'</p>\
+							</div>';
+
+			}
+			html += '</div>';
+		}
+		return html;
+	}
+
+
+	function BruteForce(data){
+		
+	}
+
+	function thisType(type){
+		type =	type == '유년기1' ? '유년기2':
+				type == '유년기2' ? '성장기':
+				type == '성장기' ? '성숙기':
+				type == '성숙기' ? '완전체':
+				type == '완전체' ? '궁극체':
+				'없음';
+
+		return type;
+	}
+
+
+	//  검색
 	let input = document.querySelector('#text');
 	let list = document.querySelector('#digimonList');
 

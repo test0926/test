@@ -11,7 +11,7 @@
 <body>
 	<header>
 		<ul class="gnb">
-			<li>인포</li>
+			<li>디슈럼 진화트리</li>
 		</ul>
 	</header>
 	<div id="container">
@@ -60,23 +60,14 @@
 				<article class="search-area">
 					<input type="search" name="" placeholder="검색" id="text" list="digimon-options" />
 				</article>
-				<article id="result">
-					<div class="total">0개</div>
-				</article>
 				<article id="digimonList"></article>
 				<script type="text/javascript">allDigimon()</script>
 				<article id="select-digimon">
-					<ul class="evolution-list-area2">
-						<li>
-							<p class="tit">진화트리 1</p>
-							<ul>
-								<li>
-									<p class="tit">유년기</p>
-									<p>유라몬</p>
-								</li>
-							</ul>
-						</li>
-					</ul>
+					<div id="digimon" style="display: none;">
+						<div class="name"></div>
+						<div id="close"><img src="img/xBtn.png"></div>
+					</div>
+					<ul class="evolution-list-area2"></ul>
 				</article>
 			</section>
 		</div>

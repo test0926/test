@@ -48,7 +48,7 @@
     header {
         position: fixed;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         top: 0;
         left: 0;
@@ -324,17 +324,16 @@
     #digimonList {
         display: flex;
         justify-content: flex-start;
-        align-items: top;
+        align-items: flex-start;
         flex-flow: wrap;
     }
     #digimonList div {
-        width: 15%;
-        margin: 1% 2%;
+        width: 14.5%;
+        margin: 1%;
         border-radius: 10px;
-        margin-left: 0px;
     }
     #digimonList div:nth-child(6n) {
-        margin-right: 0;
+        /*margin-right: 0;*/
     }
     #digimonList .checkBOX input + label {
         width: 100%;
@@ -361,33 +360,96 @@
         color: #4165ff;
     }
 
-    .evolution-list-area2 > li {
+    #digimon {
+        font-size: 21px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .evolution-list-area2 ul {
+    #digimon #close {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+    }
+    #digimon .close img {
+        vertical-align: top;
+        width: 100%;
+    }
+    .evolution-list-area2  {
+    }
+    .evolution-list-area2 > li {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         font-size: 16px;
         font-weight: 500;
-    }
-    .evolution-list-area2 > li + li {
+        flex-flow: wrap;
         margin-top: 15px;
+        padding: 15px;
+        border: 1px solid #eee;
+        border-radius: 10px;
     }
-    .evolution-list-area2 ul {
-        flex-grow: 1;
+
+    .evolution-list-area2 > li > div {
+        margin-right: 20px;
     }
-    .evolution-list-area2 ul li {
-        padding: 0 10px;
+
+    .evolution-list-area2 p {
+        position: relative;
+        padding: 10px 30px;
     }
-    .evolution-list-area2 ul li .tit {
-        font-size: 14px;
-        color: #777;
+     .evolution-list-area2 p:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        border-left: 2px solid #ddd;
     }
+    .evolution-list-area2 p:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 15px;
+        height: 2px;
+        background-color: #ddd;
+    }
+
+    .evolution-list-area2 .next div:nth-child(2) p:before {
+        top: 50%;
+        height: 2px;
+    }
+    .evolution-list-area2 .next div:nth-child(2) p:after {
+         width: 30px;
+        left: -15px;
+    }
+    .evolution-list-area2 .next div + div p:before {
+        top: -50%;
+        height: 100%;
+    }
+
+
+
     .evolution-list-area2 .tit {
         width: 140px;
         line-height: 34px;
-        flex-shrink: 0;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 30px; 
+        line-height: 1em;
+        text-align: center;
+        margin-top: 0;
     }
+    .evolution-list-area2 .tit:before,
+    .evolution-list-area2 .tit:after,
+    .evolution-list-area2 > li > div:first-child p:before,
+    .evolution-list-area2 > li > div:first-child p:after {
+        opacity: 0;
+    }
+
     .evolution-list-area2 > li > .tit {
         padding: 0px 8px;
         background-color: #f1f1f1;
@@ -395,3 +457,47 @@
         border-radius: 20px;
         margin-right: 30px;
     }
+
+    .evolution-list-area2 .next > div {
+        padding-left: 15px;
+    }
+
+    .diginame {
+        cursor: pointer;
+    }
+    .diginame:hover {
+        color: #4165ff;
+    }
+
+@media(max-width:1200px) {
+    header {
+        justify-content: center;
+    }
+    .section-area {
+        padding: 15px;
+    }
+    #container > .content {
+        padding: 15px;
+    }
+    .evolution {
+        max-height: 100%;
+    }
+
+    .evolution-select-area li + li {
+        margin-left: 5px;
+    }
+    .evolution-select-area li .checkBOX input + label {
+        font-size: 12px;
+        padding: 10px;
+        height: auto;
+        line-height: 1em;
+        text-align: center;
+    }
+
+    #digimonList div {
+        width: 22%;
+    }
+    #digimonList .checkBOX input + label {
+        font-size: 12px;
+    }
+}
