@@ -500,4 +500,19 @@
     #digimonList .checkBOX input + label {
         font-size: 12px;
     }
+
+    .evolution-list-area2 .tit {
+        min-width: 80px;
+        width: auto;
+    }
+    .evolution-list-area2 p {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    .evolution-list-area2 p:after {
+        width: 12px;
+    }
+    .evolution-list-area2 .next div:nth-child(2) p:after {
+        width: 24px;
+    }
 }
