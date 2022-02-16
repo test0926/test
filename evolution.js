@@ -400,7 +400,7 @@ const Evolution = {
 			두리몬 : {
 				type : '성숙기',
 				tree : ['미구현'],
-				dataType : 'Vi',
+				dataType : 'Da',
 			},
 		},
 		완전체 : {
