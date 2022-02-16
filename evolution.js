@@ -13,6 +13,7 @@ const Evolution = {
 		'가트몬','엔젤우몬','캅테리몬','아트라캅테리몬','스콜피오몬','쿠가몬','원뿔몬','모털몬','쥬드몬',
 		'시드라몬','쉘몬','말벌몬','프리지몬','퍼펫몬','우드몬','데이터몬','안드로몬','켄터스몬','가드로몬','메카노몬',
 		'우가몬','데블몬','레오몬','모노크로몬','메라몬','고스몬','소울몬','데드메라몬','워매몬','에테몬','스카몬','레어몬',
+		'쿠네몬','팬텀몬','쥬레이몬','레이디데블몬',
 	],
 	tree : {
 		유년기 : {
@@ -55,15 +56,15 @@ const Evolution = {
 			// 유년기2
 			코로몬 : {
 				type : '유년기2',
-				tree : ['아구몬', '피코데블몬','고부리몬','캔들몬','츄몬','베타몬','파피몬'],
+				tree : ['아구몬', '피코데블몬','고부리몬','캔들몬','츄몬','베타몬','파피몬','쿠네몬'],
 			},
 			뿔몬 : {
 				type : '유년기2',
-				tree : ['베타몬', '쉬라몬','고부리몬','피코데블몬','파피몬','에렉몬'],
+				tree : ['베타몬', '쉬라몬','고부리몬','피코데블몬','파피몬','에렉몬','쿠네몬'],
 			},
 			모티몬 : {
 				type : '유년기2',
-				tree : ['고부리몬','캔들몬','피요몬','울퉁몬','텐타몬','에렉몬','톱니몬'],		
+				tree : ['고부리몬','캔들몬','피요몬','울퉁몬','텐타몬','에렉몬','톱니몬','쿠네몬'],		
 			},
 			둥실몬 : {
 				type : '유년기2',
@@ -71,15 +72,15 @@ const Evolution = {
 			},
 			어니몬 : {
 				type : '유년기2',
-				tree : ['팔몬','머슈몬','피요몬','피코데블몬','에렉몬'],	
+				tree : ['팔몬','머슈몬','피요몬','피코데블몬','에렉몬','쿠네몬'],	
 			},
 			시드몬 : {
 				type : '유년기2',
-				tree : ['머슈몬','베타몬','팔몬','고부리몬','레나몬','피요몬'],
+				tree : ['머슈몬','베타몬','팔몬','고부리몬','레나몬','피요몬','쿠네몬'],
 			},
 			토코몬 : {
 				type : '유년기2',
-				tree : ['파닥몬','플롯트몬','피요몬','캔들몬','피코데블몬','울퉁몬','텐타몬'],
+				tree : ['파닥몬','플롯트몬','피요몬','캔들몬','피코데블몬','울퉁몬','텐타몬','쿠네몬'],
 			},
 			야옹몬 : {
 				type : '유년기2',
@@ -103,6 +104,10 @@ const Evolution = {
 			},
 		},
 		성장기 : { 
+			쿠네몬 : {
+				type : '성장기',
+				tree : ['쿠가몬','두리몬','캅테리몬'],
+			},
 			아구몬 : {
 				type : '성장기',
 				tree : ['그레이몬','다크티라노몬'],
@@ -212,7 +217,7 @@ const Evolution = {
 			},
 			니드몬 : {
 				type : '성숙기',
-				tree : ['릴리몬'],
+				tree : ['릴리몬','쥬레이몬'],
 			},
 			버드라몬 : {
 				type : '성숙기',
@@ -228,7 +233,7 @@ const Evolution = {
 			},
 			가트몬 : {
 				type : '성숙기',
-				tree : ['엔젤우몬'],
+				tree : ['엔젤우몬','레이디데블몬'],
 			},
 			캅테리몬 : {
 				type : '성숙기',
@@ -264,7 +269,7 @@ const Evolution = {
 			},
 			우드몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['쥬레이몬'],
 			},
 			가드로몬 : {
 				type : '성숙기',
@@ -284,7 +289,7 @@ const Evolution = {
 			},
 			데블몬 : {
 				type : '성숙기',
-				tree : ['묘티스몬'],
+				tree : ['묘티스몬','레이디데블몬'],
 			},
 			레오몬 : {
 				type : '성숙기',
@@ -304,7 +309,11 @@ const Evolution = {
 			},
 			고스몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['팬텀몬'],
+			},
+			소울몬 : {
+				type : '성숙기',
+				tree : ['팬텀몬'],
 			},
 			시드라몬 : {
 				type : '성숙기',
@@ -331,10 +340,6 @@ const Evolution = {
 				tree : ['미구현'],
 			},
 			두리몬 : {
-				type : '성숙기',
-				tree : ['미구현'],
-			},
-			소울몬 : {
 				type : '성숙기',
 				tree : ['미구현'],
 			},
@@ -408,9 +413,50 @@ const Evolution = {
 				type : '완전체',
 				tree : ['미구현'],
 			},
+			레이디데블몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+			},
+			팬텀몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+			},
+			쥬레이몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+			},
 		}
 	}
 };
+
+let update = {
+	date : '22.02.17(예정)',
+	digimon : {
+		쿠네몬 : {
+			tree : ['코로몬','뿔몬','어니몬','모티몬','시드몬','토코몬'],
+		},
+		쥬레이몬 : {
+			tree : ['니드몬','우드몬'],
+		},
+		팬텀몬 : {
+			tree : ['고스몬','소울몬'],
+		},
+		레이디데블몬 : {
+			tree : ['가트몬','데블몬'],
+		},
+	},
+}
+
+function updateDigimon(){
+	if(update){
+		$('.updateList .updates').text(update.date);
+		var html = '';
+		for (var key in update.digimon) {
+			html += '<li><p class="updateName">'+key+'</p></li>';
+		}
+		$('.updateList ul').html(html);
+	}
+}
 
 function allDigimon(){
 	let $el = $('#digimonList');
@@ -465,6 +511,8 @@ function selectDigimon(type){
 
 
 $( function(){
+	updateDigimon(); //업데이트 내용
+
 	$('.typeSelector').change( function(){
 		var val = $(this).val();
 		selectDigimon(val);
@@ -485,10 +533,20 @@ $( function(){
 		showList(false);
 	});
 
-	$(document).on('hover', '.diginame', function(){
-		console.log(data);
+	$(document).on('click', '.updateName', function(){
 		let name = $(this).text();
-		var data = digimonInfo(name);
+		let arr = update.digimon[name].tree;
+		getDigimon(name);
+		var quickHtml = '<li>이전 진화체 : </li>';
+		for(var i = 0; i < arr.length; i++){
+			quickHtml += '<li><div>\
+								<p class="diginame">'+arr[i]+'</p>\
+							</div>';
+		}
+		$('#digimon .name').text(name);
+		$('#fastRoot ul').html(quickHtml);
+		// $('.evolution-list-area2').html('');
+		showList(false);
 	});
 
 	$('#close').click( function(){
