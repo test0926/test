@@ -20,10 +20,41 @@
 <script type="text/javascript">
 		$(function(){
 			setTimeout( function(){
-				$('#word input').focus();
+				onClick();
 				alert('포커스');
 			}, 1000);
 		});
+
+
+		function onClick() {
+
+		  // create invisible dummy input to receive the focus first
+		  const fakeInput = document.createElement('input')
+		  fakeInput.setAttribute('type', 'text')
+		  fakeInput.style.position = 'absolute'
+		  fakeInput.style.opacity = 0
+		  fakeInput.style.height = 0
+		  fakeInput.style.fontSize = '16px' // disable auto zoom
+
+		  // you may need to append to another element depending on the browser's auto 
+		  // zoom/scroll behavior
+		  document.body.prepend(fakeInput)
+
+		  // focus so that subsequent async focus will work
+		  fakeInput.focus()
+
+		  setTimeout(() => {
+
+		    // now we can focus on the target input
+		    targetInput.focus()
+
+		    // cleanup
+		    fakeInput.remove()
+		    
+		  }, 1000)
+
+		}
+
 		function enterkey() {
 			if (window.event.keyCode == 13) {
 		    	var inp =  $('#word input').val();
