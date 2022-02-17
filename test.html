@@ -7,10 +7,11 @@
 <body>
 
 	<span id="word">
-		<input type="" name="" disabled onkeyup="enterkey()">
+		<input type="" name="" onkeyup="enterkey()">
 	</span>
 
 <script type="text/javascript">
+		$('#word input').focus();
 		function enterkey() {
 			if (window.event.keyCode == 13) {
 		    	var inp =  $('#word input').val();
