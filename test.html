@@ -20,10 +20,21 @@
 
 <script type="text/javascript">
 		$(function(){
-			  if (!("autofocus" in document.createElement("input"))) {
-			      document.getElementById("element").focus();
-			    }
+			focusAction();
 		});
+
+		async function focusAction(){
+			var user = await fakeAjax();
+		}
+
+		function fakeAjax(){
+			return new Promise( function( esolve, reject){
+				setTimeout( function(){
+					// revolve(item);
+					$('#word input').focus();
+				}, 1000);
+			});
+		}
 
 
 		function enterkey() {
