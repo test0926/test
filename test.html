@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
@@ -15,6 +17,7 @@
 		function enterkey() {
 			if (window.event.keyCode == 13) {
 		    	var inp =  $('#word input').val();
+				alert(inp);
 				if(inp == '소라'){
 					TimeoutEffect(true);
 					correct();
