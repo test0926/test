@@ -560,14 +560,23 @@
     }
 
     .today-overflow {
-        padding: 10px;
     }
-    .today-overflow span + span:before {
+    .today-overflow span {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: #4e4b6e;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+/*    .today-overflow span + span:before {
         content: ",";
         display: inline-block;
         margin-right: 5px;
     }
-
+*/
 @media(max-width:1200px) {
     header {
         justify-content: center;
