@@ -494,6 +494,7 @@
 
     #fastRoot {
         padding-top: 15px;
+        padding-bottom: 15px;
     }
     #fastRoot > div > p {
         font-weight: 500;
