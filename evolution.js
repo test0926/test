@@ -227,7 +227,7 @@ const Evolution = {
 			},
 			케라몬 : {
 				type : '성장기',
-				tree : ['미구현'],
+				tree : ['고스몬','소울몬'],
 				dataType : '무속성',
 			},
 			울퉁몬 : {
