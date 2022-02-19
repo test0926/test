@@ -528,14 +528,24 @@
         width: 200px;
         height: 80vh;
     }
+
     .updateList .wrap {
         position: sticky;
         top: 90px;
+    }
+    .updateList article {
         padding: 15px;
         border-radius: 30px;
         background-color: #fff;
         box-shadow: 5px 5px 10px rgb(225 228 249 / 50%);
         -webkit-box-shadow: 5px 5px 10px rgb(225 228 249 / 50%);
+    }
+    .updateList article + article {
+        margin-top: 15px;
+    }
+    .updateList .tit {
+        padding: 10px;
+        font-weight: 500;
     }
     .updateList ul li {
         border-bottom: 1px solid #eee;
@@ -547,6 +557,15 @@
     .updateList .wrap > p {
         font-weight: 500;
         margin: 10px 0;
+    }
+
+    .today-overflow {
+        padding: 10px;
+    }
+    .today-overflow span + span:before {
+        content: ",";
+        display: inline-block;
+        margin-right: 5px;
     }
 
 @media(max-width:1200px) {

@@ -508,8 +508,8 @@ const Evolution = {
 	}
 };
 
-let update = {
-	date : '22.02.17(예정)',
+const update = {
+	date : '22.02.17',
 	digimon : {
 		쿠네몬 : {
 			tree : ['코로몬','뿔몬','어니몬','모티몬','시드몬','토코몬'],
@@ -524,8 +524,7 @@ let update = {
 			tree : ['가트몬','데블몬'],
 		},
 	},
-}
-
+};
 function updateDigimon(){
 	if(update){
 		$('.updateList .updates').text(update.date);
@@ -536,6 +535,34 @@ function updateDigimon(){
 		$('.updateList ul').html(html);
 	}
 }
+
+const overflow = {
+	월 : ['용의눈호수'],
+	화 : ['기어사바나','사막지대'],
+	수 : ['무한산'],
+	목 : ['기어사바나','사막지대'],
+	금 : ['용의눈호수','무한산'],
+	토 : ['기어사바나','사막지대'],
+	일 : ['용의눈호수', '무한산'],
+};
+
+function getTodayLabel(){
+	var week = new Array('일', '월', '화', '수', '목', '금', '토');
+    var today = new Date().getDay();
+    var todayLabel = week[today];
+    return todayLabel;
+}
+function todayoverflow(){
+	let todayOF = overflow[getTodayLabel()];
+	console.log(todayOF);
+
+	let html = '';
+	for(var i = 0; i < todayOF.length; i++){
+		html += '<span>'+todayOF[i]+'</span>';
+	}
+	$('.today-overflow').html(html);
+}
+
 
 function allDigimon(){
 	let $el = $('#digimonList');
@@ -603,6 +630,7 @@ function selectDigimon(type){
 
 $( function(){
 	updateDigimon(); //업데이트 내용
+	todayoverflow(); //오늘 오버플로우
 
 	$('.typeSelector').change( function(){
 		var val = $(this).val();
