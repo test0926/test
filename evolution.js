@@ -508,6 +508,7 @@ const Evolution = {
 	}
 };
 
+// 업데이트
 const update = {
 	date : '22.02.17',
 	digimon : {
@@ -536,6 +537,7 @@ function updateDigimon(){
 	}
 }
 
+// 오버플로우
 const overflow = {
 	월 : ['용의눈호수'],
 	화 : ['기어사바나','사막지대'],
@@ -563,7 +565,7 @@ function todayoverflow(){
 	$('.today-overflow').html(html);
 }
 
-
+// dump
 function allDigimon(){
 	let $el = $('#digimonList');
 	let arr = Evolution.all_Digimon;
@@ -581,6 +583,7 @@ function allDigimon(){
 	$el.html(html)
 }
 
+// dump
 function DigimonList(){
 	let $list = $('#digimon-options');
 	let arr = Evolution.all_Digimon;
@@ -591,6 +594,7 @@ function DigimonList(){
 	$list.html(html)
 }
 
+// select digimon list 
 function setDigimon(obj){
 	let $el = $('#digimonList');
 	let html = '';
@@ -606,6 +610,7 @@ function setDigimon(obj){
 	$el.html(html);
 }
 
+// digitype color 
 function dataTypeColor(type){
 	var obj = {
 		'Va' : '#2adb60',
@@ -617,6 +622,7 @@ function dataTypeColor(type){
 	return obj[type];
 }
 
+// 진화 단계 선택 (성장기,유년기...)
 function selectDigimon(type){
 	let html = '';
 	if(type == 'all') {
@@ -632,12 +638,14 @@ $( function(){
 	updateDigimon(); //업데이트 내용
 	todayoverflow(); //오늘 오버플로우
 
+	// 진화단계 선택
 	$('.typeSelector').change( function(){
 		var val = $(this).val();
 		selectDigimon(val);
 		showList(true);
 	});
 
+	// 검색 리스트 
 	$(document).on('change', '.digimon', function(){
 		let name = $(this).val();
 		$('#digimon .name span:first-child').text(name);
@@ -645,6 +653,7 @@ $( function(){
 		showList(false);
 	});
 
+	// 선택 디지몬 정보
 	$(document).on('click', '.diginame', function(){
 		let name = $(this).text();
 		$('#digimon .name span:first-child').text(name);
@@ -652,22 +661,24 @@ $( function(){
 		showList(false);
 	});
 
+	// 업데이트 디지몬 정보
 	$(document).on('click', '.updateName', function(){
 		let name = $(this).text();
 		let arr = update.digimon[name].tree;
 		getDigimon(name);
-		var quickHtml = '<li>이전 진화체 : </li>';
+		var quickHtml = '';
 		for(var i = 0; i < arr.length; i++){
 			quickHtml += '<li><div>\
 								<p class="diginame">'+arr[i]+'</p>\
 							</div>';
 		}
 		$('#digimon .name span:first-child').text(name);
-		$('#fastRoot ul').html(quickHtml);
+		$('#fastRoot .before_tree').html(quickHtml);
 		// $('.evolution-list-area2').html('');
 		showList(false);
 	});
 
+	// 디지몬정보 닫기
 	$('#close').click( function(){
 		$('#digimonList input').prop("checked", false);
 		$('#digimonList .checkBOX').show();
@@ -699,13 +710,13 @@ $( function(){
 			}
 		}
 	}
-
+	//  디지몬 타입
 	function digimonType(name){
 		var data = digimonInfo(name);
 		return data.dataType;
 	}
 
-
+	// 선택디지몬 다음 트리
 	function getDigimon(name){
 		let data = digimonInfo(name);
 		var html = ''
@@ -720,6 +731,8 @@ $( function(){
 							<p class="tit">'+ type +'</p>\
 							<p>'+data.tree[0]+'</p>\
 					</div></li>';
+
+			quickHtml = '<li><p class="diginone">미구현</p></li>';
 
 		} else { // 진화트리가 있을때
 			for(var i = 0; i < data.tree.length; i++){
@@ -745,11 +758,15 @@ $( function(){
 				html += '</li>';
 			}
 		}
-		$('#fastRoot ul').html(quickHtml);
+		$('#fastRoot .next_tree').html(quickHtml);
 		$('.evolution-list-area2').html(html);
+
+		// 이전 트리
+		var bfType = beforeType(data.type);
+		BeforeEvolte(name, bfType);
 	}
 
-
+	//  연결된 트리
 	function chainTree(data){
 		var type =	thisType(data.type);
 		var html = '';
@@ -772,11 +789,40 @@ $( function(){
 		return html;
 	}
 
+	function BeforeEvolte(name, type){
+		var obj = Evolution.tree[type];
+		console.log(name, type, obj);
 
-	function BruteForce(data){
-		
+		var before_arr = [];
+		var html = '';
+		for (key in obj) { 
+			var tree = obj[key].tree;
+
+			for(var i = 0; i < tree.length; i++){
+				if(tree[i] == name){
+					html += '<li>\
+								<p class="diginame">'+key+'</p>\
+							</li>';
+					before_arr.push(key);
+					break;
+				}
+			}
+		}
+		if(before_arr.length > 0){
+			$('#fastRoot > div:first-child').show();
+		} else {
+			$('#fastRoot > div:first-child').hide();
+		}
+		$('#fastRoot .before_tree').html(html);
 	}
 
+	function BruteForce(){
+		for (key in obj) { 
+			
+		}
+	}
+
+	// 선택된 디지몬 단계
 	function thisType(type){
 		type =	type == '유년기1' ? '유년기2':
 				type == '유년기2' ? '성장기':
@@ -784,6 +830,15 @@ $( function(){
 				type == '성숙기' ? '완전체':
 				type == '완전체' ? '궁극체':
 				'없음';
+
+		return type;
+	}
+
+	// 선택된 디지몬 이전 단계
+	function beforeType(type){
+		type =	type == '궁극체' ? '완전체':
+				type == '완전체' ? '성숙기':
+				type == '성숙기' ? '성장기':'유년기';
 
 		return type;
 	}

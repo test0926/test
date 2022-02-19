@@ -495,6 +495,11 @@
     #fastRoot {
         padding-top: 15px;
     }
+    #fastRoot > div > p {
+        font-weight: 500;
+        margin: 5px;
+        margin-bottom: 0;
+    }
     #fastRoot ul {
         list-style: none;
         display: flex;
@@ -511,6 +516,10 @@
         background-color: #4e4b6e;
         color: #fff;
         font-weight: 500;
+    }
+    #fastRoot li p.diginone {
+        background-color: #eee;
+        color: #ccc;
     }
      #fastRoot li p:hover {
         background-color: rgb(78, 65, 219);
