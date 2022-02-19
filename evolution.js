@@ -556,8 +556,6 @@ function getTodayLabel(){
 }
 function todayoverflow(){
 	let todayOF = overflow[getTodayLabel()];
-	console.log(todayOF);
-
 	let html = '';
 	for(var i = 0; i < todayOF.length; i++){
 		html += '<span>'+todayOF[i]+'</span>';
@@ -791,8 +789,6 @@ $( function(){
 
 	function BeforeEvolte(name, type){
 		var obj = Evolution.tree[type];
-		console.log(name, type, obj);
-
 		var before_arr = [];
 		var html = '';
 		for (key in obj) { 
