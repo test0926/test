@@ -237,7 +237,7 @@ const Evolution = {
 			},
 			레나몬 : {
 				type : '성장기',
-				tree : ['구미호몬'],
+				tree : ['구미호몬','가트몬'],
 				dataType : 'Da',
 			},
 		},
