@@ -407,6 +407,16 @@ const Evolution = {
 				tree : ['도사몬'],
 				dataType : 'Da',
 			},
+			티라노몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			스파이더몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+				dataType : 'Vi',
+			},
 		},
 		완전체 : {
 			메탈그레이몬 : {
@@ -518,14 +528,19 @@ const Evolution = {
 				type : '완전체',
 				tree : ['미구현'],
 				dataType : 'Va',
-			}
+			},
+			도사몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
 		}
 	}
 };
 
 // 업데이트
 const update = {
-	date : '22.02.24',
+	date : '22.03.03',
 	digimon : {
 		도사몬 : {
 			tree : ['구미호몬'],
@@ -584,7 +599,7 @@ function allDigimon(){
 	$('.total').html('총 <em>'+arr.length+'</em>개');
 
 	for(var i = 0; i < arr.length; i++){
-		html += '\
+		html +=03\
 			<div class="checkBOX">\
 				<input type="radio" name="tree" value="'+arr[i]+'" class="digimon">\
 				<label>'+arr[i]+'</label>\
