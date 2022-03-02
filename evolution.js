@@ -599,7 +599,7 @@ function allDigimon(){
 	$('.total').html('총 <em>'+arr.length+'</em>개');
 
 	for(var i = 0; i < arr.length; i++){
-		html +=03\
+		html +='\
 			<div class="checkBOX">\
 				<input type="radio" name="tree" value="'+arr[i]+'" class="digimon">\
 				<label>'+arr[i]+'</label>\
