@@ -143,7 +143,7 @@ const Evolution = {
 			},
 			팔몬 : {
 				type : '성장기',
-				tree : ['니드몬'],
+				tree : ['니드몬','해바라기몬'],
 				dataType : 'Da',
 			},
 			피요몬 : {
@@ -183,7 +183,7 @@ const Evolution = {
 			},
 			머슈몬 : {
 				type : '성장기',
-				tree : ['프리지몬','우드몬'],
+				tree : ['프리지몬','우드몬','해바라기몬'],
 				dataType : 'Vi',
 			},
 			톱니몬 : {
@@ -233,7 +233,7 @@ const Evolution = {
 			},
 			울퉁몬 : {
 				type : '성장기',
-				tree : ['모노크로몬'],
+				tree : ['모노크로몬','아이스몬'],
 				dataType : 'Da',
 			},
 			레나몬 : {
@@ -305,7 +305,7 @@ const Evolution = {
 			},
 			시드라몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['메가시드라몬'],
 				dataType : 'Da',
 			},
 			쉘몬 : {
