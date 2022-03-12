@@ -420,12 +420,12 @@ const Evolution = {
 			},
 			아이스몬 : {
 				type : '성숙기',
-				tree : ['울퉁몬'],
+				tree : ['미구현'],
 				dataType : 'Da',
 			},
 			해바라기몬 : {
 				type : '성숙기',
-				tree : ['팔몬','머슈몬'],
+				tree : ['미구현'],
 				dataType : 'Da',
 			},
 		},
@@ -547,7 +547,7 @@ const Evolution = {
 			},
 			메가시드라몬 : {
 				type : '완전체',
-				tree : ['시드라몬'],
+				tree : ['미구현'],
 				dataType : 'Da',
 			},
 		}
@@ -559,13 +559,13 @@ const update = {
 	date : '22.03.12',
 	digimon : {
 		아이스몬 : {
-			tree : ['미구현'],
+			tree : ['울퉁몬'],
 		},
 		메가시드라몬 : {
-			tree : ['미구현'],
+			tree : ['시드라몬'],
 		},
 		해바라기몬 : {
-			tree : ['미구현'],
+			tree : ['팔몬','머슈몬'],
 		},
 	},
 };
