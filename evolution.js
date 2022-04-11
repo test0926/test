@@ -902,13 +902,11 @@ $( function(){
 
 		for (let option of list_option) {
 			var index = $(option).parent().index();
-			console.log(index);
-			
-			// if(option.value.toUpperCase().indexOf(text) > -1){
-	  //     		$(list_item).eq(index).show();
-	 	// 	}else{
-	  //   		$(list_item).eq(index).hide();
-	  //   	}
+			if(option.value.toUpperCase().indexOf(text) > -1){
+	      		$(list_item).eq(index).show();
+	 		}else{
+	    		$(list_item).eq(index).hide();
+	    	}
 	  	};
 	}
 
