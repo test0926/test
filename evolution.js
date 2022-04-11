@@ -241,6 +241,11 @@ const Evolution = {
 				tree : ['구미호몬','가트몬'],
 				dataType : 'Da',
 			},
+			올챙몬 : {
+				type : '성장기',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
 		},
 		성숙기 : { 
 			그레이몬 : {
@@ -427,6 +432,11 @@ const Evolution = {
 				type : '성숙기',
 				tree : ['미구현'],
 				dataType : 'Da',
+			},
+			플라이몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+				dataType : 'Va',
 			},
 		},
 		완전체 : {
