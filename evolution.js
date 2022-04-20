@@ -244,7 +244,7 @@ const Evolution = {
 			올챙몬 : {
 				type : '성장기',
 				tree : ['개굴몬'],
-				dataType : 'Va',
+				dataType : 'Vi',
 			},
 		},
 		성숙기 : { 
@@ -441,7 +441,7 @@ const Evolution = {
 			개굴몬 : {
 				type : '성숙기',
 				tree : ['왕개굴몬'],
-				dataType : 'Va',
+				dataType : 'Vi',
 			},
 		},
 		완전체 : {
@@ -568,7 +568,7 @@ const Evolution = {
 			왕개굴몬 : {
 				type : '완전체',
 				tree : ['미구현'],
-				dataType : 'Va',
+				dataType : 'Vi',
 			},
 		}
 	}
