@@ -124,6 +124,16 @@ const Evolution = {
 				tree : ['아기벌몬'],
 				dataType : '',
 			},
+			치코몬 : {
+				type : '유년기1',
+				tree : ['꼬마몬'],
+				dataType : '',
+			},
+			꼬마몬 : {
+				type : '유년기2',
+				tree : ['브이몬'],
+				dataType : '',
+			}
 		},
 		성장기 : { 
 			쿠네몬 : {
@@ -245,6 +255,11 @@ const Evolution = {
 				type : '성장기',
 				tree : ['개굴몬'],
 				dataType : 'Vi',
+			},
+			브이몬 : {
+				type : '성장기',
+				tree : ['브이드라몬'],
+				dataType : 'Va',
 			},
 		},
 		성숙기 : { 
@@ -443,6 +458,11 @@ const Evolution = {
 				tree : ['왕개굴몬'],
 				dataType : 'Vi',
 			},
+			브이드라몬 : {
+				type : '성숙기',
+				tree : ['에어로브이드라몬'],
+				dataType : 'Va',
+			},
 		},
 		완전체 : {
 			메탈그레이몬 : {
@@ -570,6 +590,11 @@ const Evolution = {
 				tree : ['미구현'],
 				dataType : 'Vi',
 			},
+			에어로브이드라몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
 		}
 	}
 };
@@ -578,11 +603,20 @@ const Evolution = {
 const update = {
 	date : '22.04.11',
 	digimon : {
-		개굴몬 : {
-			tree : ['올챙몬'],
+		치코몬 : {
+			tree : [''],
 		},
-		왕개굴몬 : {
-			tree : ['개굴몬'],
+		꼬마몬 : {
+			tree : ['치코몬'],
+		},
+		브이몬 : {
+			tree : ['꼬마몬'],
+		},
+		브이드라몬 : {
+			tree : ['브이몬'],
+		},
+		에어로브이드라몬 : {
+			tree : ['브이드라몬'],
 		},
 	},
 };
