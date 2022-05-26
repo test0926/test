@@ -630,7 +630,7 @@ const Evolution = {
 			디지타몬 : {
 				type : '완전체',
 				tree : ['미구현'],
-				dataType : 'Vi',
+				dataType : 'Da',
 			},
 			가비지몬 : {
 				type : '완전체',
