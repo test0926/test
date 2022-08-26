@@ -5,11 +5,12 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="STATIC/js/aos.js"></script>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/style.css"/>
+	<meta name="viewport" content="320, initial-scale=1">
 </head>
 <body>
 	<article class="landing_area pd_0">
-		<div class="logo"><img src="STATIC/img/logo/Logo.png"></div>
-		<img src="STATIC/img/asset/background_top.png" class="img-background">
+		<div class="logo"><img src="STATIC/img/logo/Logo.png" class="no-scale"></div>
+		<img src="STATIC/img/asset/background_top.png" class="img-background no-scale">
 		<div class="txt_title txt_top_01" data-aos="zoom-out" data-aos-duration="1000">
 			<img src="STATIC/img/asset/txt_title_top_01.png">
 		</div>
@@ -64,10 +65,10 @@
 					<img src="STATIC/img/asset/txt_blind_box.png">
 				</div>
 				<div class="ab_area fl_box_bt fl_center">
-					<div class="pl_80" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000" >
+					<div class="pr_80 fl_end" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000" >
 						<img src="STATIC/img/asset/txt_blind_01.png">
 					</div>
-					<div class="pr_80" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
+					<div class="pl_80 fl_start" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
 						<img src="STATIC/img/asset/txt_blind_02.png">
 					</div>
 				</div>
@@ -151,7 +152,7 @@
 	</article>
 
 	<article class="landing_area ab_wrap pd_0">
-		<img src="STATIC/img/asset/txt_content_07_bg.png" class="img-background">
+		<img src="STATIC/img/asset/txt_content_07_bg.png" class="img-background no-scale">
 		<div class="ab_area">
 			<div class="inner">
 				<div class="txt_title mt_120 mb_80" data-aos="fade-down" data-aos-duration="1000">
@@ -192,8 +193,8 @@
 	<div class="ab_btn">
 		<a href="javascript:scrollBottom()"><img src="STATIC/img/asset/btn_09.png"></a>
 	</div>
-	<article class="landing_area ab_wrap bg_thd pdb_0">
-		<img src="STATIC/img/asset/txt_content_09_bg.png" class="img-background img-09">
+	<article class="landing_area ab_wrap bg_thd pd_0">
+		<img src="STATIC/img/asset/txt_content_09_bg.png" class="img-background img-09 no-scale">
 		<div class="ab_area">
 			<div class="inner fl_center">
 				<div class="txt_title" data-aos="fade-down" data-aos-duration="1000">
@@ -226,14 +227,32 @@
 	</article>
 
 	<script type="text/javascript">
-		AOS.init();
-
 		function scrollBottom(){
 			var height = $('body').height();
 			$('html, body').animate({
 	            'scrollTop': height,
 	        }, 1500);
 		}
+
+		function imgScale(){
+			var target = $('img');
+			var windowWidth = $( window ).width();
+			if(windowWidth > 1199) {
+				target.each(function(index, item){
+					var $this = $(item);
+					if(!$this.hasClass('no-scale')){
+						var imgW = $this.width();
+						$this.css('width', (imgW*0.75)+'px');
+					}
+				});
+			}
+		}
+
+		$( function(){
+			imgScale();
+			AOS.init();
+		})
+
 	</script>
 </body>
 </html>
