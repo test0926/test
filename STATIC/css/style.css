@@ -141,7 +141,7 @@
         padding-left: 200px;
     }
     .pr_80 {
-        padding-right: 80px;
+        padding-right: 120px;
     }
     .pr_150 {
         padding-right: 200px;
@@ -173,6 +173,16 @@
         flex-grow: 1;
         width: 50%;
     }
+    .fl_start  {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .fl_end {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
     .btn_area {
         display: flex;
@@ -194,13 +204,14 @@
         height: 100%;
     }
     .ab_btn {
-       /* position: absolute;
-        left: 0;
-        top: 0;*/
+        position: relative;
         width: 100%;
         text-align: center;
         margin-top: -59px;
         z-index: 1000;
+    }
+    .ab_btn + .landing_area {
+        margin-top: -79px;
     }
 
     .list {
@@ -213,5 +224,10 @@
     .list li + li {
         margin-top: 50px;
     }
+
+
+@media {
+
+}
  
     
