@@ -1201,7 +1201,7 @@ footer .sns img {
         box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.14);
     }
     .slider-rewardImage .swiper-slide-active {
-        
+        width: 100%;
     }
     .slider-rewardImage .swiper-slide-active img {
         margin-top: 0;
