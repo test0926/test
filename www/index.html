@@ -218,25 +218,28 @@
 					<div class="swiper-button-prev slide-prev"></div>
 					<div class="swiper-button-next slide-next"></div>
 				</div>
-				<div class="swiper-container slider-rewardImage">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="STATIC/img/asset/visual/reward_big_01.png">
+				<div class="sc51cwe">
+					<div class="swiper-container slider-rewardImage">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="STATIC/img/asset/visual/reward_big_01.png">
+							</div>
+							<div class="swiper-slide">
+								<img src="STATIC/img/asset/visual/reward_big_02.png">
+							</div>
+							<div class="swiper-slide">
+								<img src="STATIC/img/asset/visual/reward_big_03.png">
+							</div>
+							<div class="swiper-slide">
+								<img src="STATIC/img/asset/visual/reward_big_04.png">
+							</div>
+							<div class="swiper-slide">
+								<img src="STATIC/img/asset/visual/reward_big_05.png">
+							</div>
 						</div>
-						<div class="swiper-slide">
-							<img src="STATIC/img/asset/visual/reward_big_02.png">
-						</div>
-						<div class="swiper-slide">
-							<img src="STATIC/img/asset/visual/reward_big_03.png">
-						</div>
-						<div class="swiper-slide">
-							<img src="STATIC/img/asset/visual/reward_big_04.png">
-						</div>
-						<div class="swiper-slide">
-							<img src="STATIC/img/asset/visual/reward_big_05.png">
-						</div>
-					</div>
+					</div>	
 				</div>
+				
 			</section>
 			<section class="section_wrap">
 				<div class="inner center">
@@ -836,27 +839,14 @@
 		centeredSlides: true,
 		allowTouchMove: false,
 		loop: true,
-		autoplay: {    
-			delay: 3000,      
-			disableOnInteraction: false,  
-		},
+		// autoplay: {    
+		// 	delay: 3000,      
+		// 	disableOnInteraction: false,  
+		// },
 		navigation: {
 			nextEl: ".slide-next",
 			prevEl: ".slide-prev",
 		},
-		on : {
-			init : function(swiper){
-				var $target = $(swiper.slides[swiper.activeIndex]);
-				var current = $target.offset().left + ($target.outerWidth()/2);
-				var center = $(window).width()/2;
-
-				if(center != current && current >  center){
-					$(swiper.$wrapperEl[0]).css({
-						'margin-left' : (current - center)*-1,
-					})
-				}
-			}
-		}
 	});
 
 	var slideRewardText = new Swiper(".slider-rewardText", {
