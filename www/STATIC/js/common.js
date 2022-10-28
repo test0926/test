@@ -146,17 +146,16 @@ function fullPage(target, obj){
 			// 터치 종료 객체 ID 확인
 			var active = $(that.$section).eq(that.state.index);
 			if(active.hasClass('touchScroll')){
-
 				if(active.attr('id') == 'roadMap'){
-					var $target = active;
+					$target = active;
 				} else {
-					var $target = active.find('.inner');
+					$target = active.find('.inner');
 				}
-
 				var height = $target.outerHeight();
 				var scroll = $target.scrollTop();
 				var scrollHeihgt = $target.prop('scrollHeight');
 
+				console.log(scroll+height, scrollHeihgt);
 				if((height+scroll) ==  scrollHeihgt || scroll == 0){		
 					that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
 					that.touchMove.end.Y = e.originalEvent.changedTouches[0].clientY;		
@@ -169,6 +168,8 @@ function fullPage(target, obj){
 				        	}
 						}
 					};	
+
+					alert(scroll+height, scrollHeihgt);
 				}
 			} else {
 				that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
@@ -297,13 +298,6 @@ $(window).on("scroll", function(){
 		}
 	}
 });
-
-function setScreenSize() {
-	let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-setScreenSize();
-
 
 
 $( function(){
