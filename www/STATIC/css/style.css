@@ -1767,16 +1767,19 @@ footer .sns img {
         width: 261px;
     }
     .slider-rewardImage .swiper-slide {
-        width: 214px;
         margin-top: 50px;
         height: 362px;
         padding: 0 12px;
+        text-align: right;
     }
     .slider-rewardImage .swiper-slide img {
         width: 190px;
     }
     .slider-rewardImage .swiper-slide-active {
         width: 100%;
+    }
+    .slider-rewardImage .swiper-slide-active + .swiper-slide  {
+        text-align: left;
     }
     .slider-rewardImage .swiper-slide-active img {
         width: 237px;
