@@ -4,7 +4,8 @@
 	<meta name="code" charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes"/>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="STATIC/js/swiper-bundle.min.js"></script>
+	<!-- <script type="text/javascript" src="STATIC/js/swiper-bundle.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="STATIC/js/common.js"></script>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/swiper-bundle.min.css"/>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/style.css"/>
@@ -836,7 +837,8 @@
 
 
 	var slideRewardImage = new Swiper(".slider-rewardImage", {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
+		autoWidth : true,
 		autoResize: true,
 		allowTouchMove: false,
 		loop: true,
