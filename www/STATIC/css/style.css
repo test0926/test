@@ -1139,9 +1139,12 @@ footer .sns img {
 
 
     .slider-rewardText {
+        position: relative;
         padding-top: 166px;
         max-width: 700px;
         margin: 0 auto;
+        z-index: 1000;
+        flex-shrink: 0;
     }
     .slider-rewardText .swiper-slide {
         text-align: center;
@@ -1179,7 +1182,19 @@ footer .sns img {
     .slider-rewardText .swiper-button-next:after {
         background-image: url(../img/asset/icon/icon_arrow-right.png);
     }
-
+    .sc51cwe {
+        position: relative;
+        z-index: 1;
+    }
+    .sc51cwe .swiper-container {
+        margin-left: -100px;
+    }
+    .slider-rewardImage .swiper-slide-active {
+        transform: scale(1.2175);
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .slider-rewardImage .swiper-slide-active img {  margin-top: 70px; width: 308px;  border: 8px solid #F8F8F9;}
     .slider-rewardImage {
         /*max-width: 1780px;*/
         margin: 0 auto;
@@ -1199,14 +1214,6 @@ footer .sns img {
         max-width: 100%;
         border-radius: 20px;
         box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.14);
-    }
-    .slider-rewardImage .swiper-slide-active {
-        
-    }
-    .slider-rewardImage .swiper-slide-active img {
-        margin-top: 0;
-        width: 375px;
-        border: 8px solid #F8F8F9;
     }
 
 /* top */
@@ -1756,21 +1763,32 @@ footer .sns img {
         height: 16px;
         background-size: contain;
     }
-    .slider-rewardImage .swiper-wrapper {
-        margin-left: -24px;
-    }
+    .sc51cwe .swiper-container { margin-left: 0; }
     .slider-rewardImage .swiper-slide {
+        width: 261px;
         margin-top: 50px;
         height: 362px;
         padding: 0 12px;
     }
+    .slider-rewardImage .swiper-slide-prev {
+        text-align: right;
+    }
+    .slider-rewardImage .swiper-slide-next {
+        text-align: left;
+    }
     .slider-rewardImage .swiper-slide img {
         width: 190px;
+    }
+    .slider-rewardImage .swiper-slide-active {
+        margin-left: 0;
+        margin-right: 0;
+        transform: scale(1);
     }
     .slider-rewardImage .swiper-slide-active img {
         width: 237px;
         border-width: 4px;
         border-radius: 8px;
+        margin-top: 0;
     }
 
 
