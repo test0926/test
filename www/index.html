@@ -4,8 +4,7 @@
 	<meta name="code" charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes"/>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- <script type="text/javascript" src="STATIC/js/swiper-bundle.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="STATIC/js/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="STATIC/js/common.js"></script>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/swiper-bundle.min.css"/>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/style.css"/>
@@ -179,10 +178,6 @@
 					</div>
 				</div>
 			</section>
-			<style type="text/css">
-				
-
-			</style>
 			<section class="section_wrap" id="SC-reward-main">
 				<div class="swiper-container slider-rewardText">
 					<div class="swiper-wrapper">
@@ -223,24 +218,22 @@
 					<div class="swiper-button-prev slide-prev"></div>
 					<div class="swiper-button-next slide-next"></div>
 				</div>
-				<div class="swiper-container bot">
-					<div class="slider-rewardImage">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_01.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_02.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_03.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_04.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_05.png">
-							</div>
+				<div class="swiper-container slider-rewardImage">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="STATIC/img/asset/visual/reward_big_01.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="STATIC/img/asset/visual/reward_big_02.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="STATIC/img/asset/visual/reward_big_03.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="STATIC/img/asset/visual/reward_big_04.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="STATIC/img/asset/visual/reward_big_05.png">
 						</div>
 					</div>
 				</div>
@@ -838,18 +831,32 @@
 
 	var slideRewardImage = new Swiper(".slider-rewardImage", {
 		slidesPerView: 'auto',
-		autoWidth : true,
+		slidesPerGroup : 1,
 		autoResize: true,
+		centeredSlides: true,
 		allowTouchMove: false,
 		loop: true,
-		// autoplay: {    
-		// 	delay: 3000,      
-		// 	disableOnInteraction: false,  
-		// },
+		autoplay: {    
+			delay: 3000,      
+			disableOnInteraction: false,  
+		},
 		navigation: {
 			nextEl: ".slide-next",
 			prevEl: ".slide-prev",
 		},
+		on : {
+			init : function(swiper){
+				var $target = $(swiper.slides[swiper.activeIndex]);
+				var current = $target.offset().left + ($target.outerWidth()/2);
+				var center = $(window).width()/2;
+
+				if(center != current && current >  center){
+					$(swiper.$wrapperEl[0]).css({
+						'margin-left' : (current - center)*-1,
+					})
+				}
+			}
+		}
 	});
 
 	var slideRewardText = new Swiper(".slider-rewardText", {
