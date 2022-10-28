@@ -151,26 +151,26 @@ function fullPage(target, obj){
 				} else {
 					$target = active.find('.inner');
 				}
-				var height = $target.outerHeight();
-				var scroll = $target.scrollTop();
-				var scrollHeihgt = $target.prop('scrollHeight');
+				
+				$target.scroll( function(){
+					var height = $target.outerHeight();
+					var scroll = $target.scrollTop();
+					var scrollHeihgt = $target.prop('scrollHeight');
 
-				console.log(scroll+height, scrollHeihgt);
-				if((height+scroll) ==  scrollHeihgt || scroll == 0){		
-					that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
-					that.touchMove.end.Y = e.originalEvent.changedTouches[0].clientY;		
-					if(that.TouchDirection() == 'Y'){
+					if((height+scroll) ==  scrollHeihgt || scroll == 0){		
+						that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
+						that.touchMove.end.Y = e.originalEvent.changedTouches[0].clientY;		
+						if(that.TouchDirection() == 'Y'){
 
-						if(Math.abs(that.touchMove.start.Y - that.touchMove.end.Y) > 50){
-							if(that.state.timeout){
-				        		that.timeout();
-				        		that.moveTrans(that.touchMove.start.Y - that.touchMove.end.Y);
-				        	}
-						}
-					};	
-
-					alert(scroll+height, scrollHeihgt);
-				}
+							if(Math.abs(that.touchMove.start.Y - that.touchMove.end.Y) > 50){
+								if(that.state.timeout){
+					        		that.timeout();
+					        		that.moveTrans(that.touchMove.start.Y - that.touchMove.end.Y);
+					        	}
+							}
+						};	
+					}
+				});
 			} else {
 				that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
 				that.touchMove.end.Y = e.originalEvent.changedTouches[0].clientY;		
