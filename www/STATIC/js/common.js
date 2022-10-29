@@ -124,7 +124,7 @@ function fullPage(target, obj){
 
 			alert('scroll : '+ scroll+' scheight : '+ scrollHeihgt + ' moved :'+that.scroll.moved )
 
-			if(scroll ==  scrollHeihgt || scroll == 0){		
+			if((scroll-scrollHeihgt) > 2 || scroll == 0){		
 				that.scroll.moved = false;
 			} else {
 				that.scroll.moved = true;
