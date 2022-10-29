@@ -1938,6 +1938,9 @@ footer .sns img {
     #SCSVS > .inner {
         padding-top: 100px;
     }
+    #SCSVS .slide-inner {
+        flex-grow: 1;
+    }
     #SCSVS .txt_head4 {
         word-break: keep-all;
     }
@@ -1956,6 +1959,7 @@ footer .sns img {
     }
     .slider-ddp {
         padding-left: 20px;
+        height: 100%;
     }
     .slider-ddp .swiper-slide {
         width: 207px;
