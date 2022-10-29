@@ -119,8 +119,8 @@ function fullPage(target, obj){
       	this.$inner.scroll( function(e){
     		var $target = $(this);
 			var height = $target.outerHeight();
-			var scroll = $target.scrollTop();
-			var scrollHeihgt = $target.prop('scrollHeight')-height;
+			var scroll = parseInt($target.scrollTop());
+			var scrollHeihgt = parseInt($target.prop('scrollHeight')-height);
 
 			alert('scroll : '+ scroll+' scheight : '+ scrollHeihgt + ' moved :'+that.scroll.moved )
 
