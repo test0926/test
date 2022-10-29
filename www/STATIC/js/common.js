@@ -120,14 +120,13 @@ function fullPage(target, obj){
     		var $target = $(this);
 			var height = $target.outerHeight();
 			var scroll = parseInt($target.scrollTop());
-			var scrollHeihgt = parsInt($target.prop('scrollHeight')-height);
+			var scrollHeihgt = parseInt($target.prop('scrollHeight')-height);
 
 			if(scroll >=  scrollHeihgt || scroll == 0){		
 				that.scroll.moved = false;
 			} else {
 				that.scroll.moved = true;
 			}
-				console.log(that.scroll.moved);
 		});
 
         this.$target.on("wheel mousewheel DOMMouseScroll",function(e){
@@ -210,6 +209,7 @@ function fullPage(target, obj){
 	    		}
     		}
     	}
+    	this.scroll.moved = false;
     	this.state.index = this.state.index < 0 ? 0:this.state.index;
     	this.moveAni();
     }
