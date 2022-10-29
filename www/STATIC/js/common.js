@@ -103,15 +103,34 @@ function fullPage(target, obj){
     		Y: 0,
     	},
     },
+    this.scroll = {
+    	moved : false,
+    }
     fullPage.prototype.init = function(selector, obj){
         this.$target = $(target);
         this.$section = this.$target.find('.section_wrap');
+        this.$inner = $('.scroll-inner');
         this.obj = obj;
         this.state.viewHeight = this.$target.height();
     }
     fullPage.prototype.initEvent = function(e){
         var that = this;
-        this.$target.on("mousewheel DOMMouseScroll ",function(e){
+
+      	this.$inner.scroll( function(e){
+    		var $target = $(this);
+			var height = $target.outerHeight();
+			var scroll = $target.scrollTop();
+			var scrollHeihgt = $target.prop('scrollHeight')-height;
+
+			if(scroll ==  scrollHeihgt || scroll == 0){		
+				that.scroll.moved = false;
+			} else {
+				that.scroll.moved = true;
+			}
+				console.log(that.scroll.moved);
+		});
+
+        this.$target.on("wheel mousewheel DOMMouseScroll",function(e){
         	e.preventDefault();
         	if(that.state.index == 5 || that.state.index == 6 || that.state.index == 9){
         		swiper = that.state.index == 5 ? slideinside:
@@ -129,9 +148,6 @@ function fullPage(target, obj){
 	        	}
         	}
         });
-  //       window.addEventListener("wheel", function(e){
-		// 	e.preventDefault();
-		// },{ passive : false });
 
         this.$target.on("touchstart", function(e){		
 			that.touchMove.start.X = e.originalEvent.changedTouches[0].clientX;
@@ -143,35 +159,8 @@ function fullPage(target, obj){
 		});
 		
 		this.$target.on("touchend", function(e){
-			// 터치 종료 객체 ID 확인
 			var active = $(that.$section).eq(that.state.index);
-			if(active.hasClass('touchScroll')){
-				if(active.attr('id') == 'roadMap'){
-					$target = active;
-				} else {
-					$target = active.find('.inner');
-				}
-				
-				$target.scroll( function(){
-					var height = $target.outerHeight();
-					var scroll = $target.scrollTop();
-					var scrollHeihgt = $target.prop('scrollHeight');
-
-					if((height+scroll) ==  scrollHeihgt || scroll == 0){		
-						that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
-						that.touchMove.end.Y = e.originalEvent.changedTouches[0].clientY;		
-						if(that.TouchDirection() == 'Y'){
-
-							if(Math.abs(that.touchMove.start.Y - that.touchMove.end.Y) > 50){
-								if(that.state.timeout){
-					        		that.timeout();
-					        		that.moveTrans(that.touchMove.start.Y - that.touchMove.end.Y);
-					        	}
-							}
-						};	
-					}
-				});
-			} else {
+			if(!that.scroll.moved){
 				that.touchMove.end.X = e.originalEvent.changedTouches[0].clientX;
 				that.touchMove.end.Y = e.originalEvent.changedTouches[0].clientY;		
 				if(that.TouchDirection() == 'Y'){
@@ -181,7 +170,7 @@ function fullPage(target, obj){
 			        		that.moveTrans(that.touchMove.start.Y - that.touchMove.end.Y);
 			        	}
 					}
-				};	
+				};
 			}
 		});
     }
@@ -195,8 +184,6 @@ function fullPage(target, obj){
     	var that = this;
     	var moved = this.state.viewHeight*-1;
     	this.state.direction = delta > 0 ? 'down':'up';
-
-    	console.log( this.state.direction );
 
     	if(this.state.direction === 'up'){
     		this.state.index--;
@@ -232,7 +219,6 @@ function fullPage(target, obj){
     	$('.container').css({
 			'transform' : 'translate3d(0px, '+(moved*this.state.index)+'px, 0px)',
 		});
-
 		this.moveAni();
     }
     fullPage.prototype.swipers = function(swiper, delta){
