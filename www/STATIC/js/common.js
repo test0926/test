@@ -109,7 +109,7 @@ function fullPage(target, obj){
     fullPage.prototype.init = function(selector, obj){
         this.$target = $(target);
         this.$section = this.$target.find('.section_wrap');
-        this.$inner = $('.scroll-inner');
+        this.$inner = $ ('.scroll-inner');
         this.obj = obj;
         this.state.viewHeight = this.$target.height();
     }
@@ -121,6 +121,8 @@ function fullPage(target, obj){
 			var height = $target.outerHeight();
 			var scroll = $target.scrollTop();
 			var scrollHeihgt = $target.prop('scrollHeight')-height;
+
+			alert('scroll : '+ scroll+' scheight : '+ scrollHeihgt + ' moved :'+that.scroll.moved )
 
 			if(scroll ==  scrollHeihgt || scroll == 0){		
 				that.scroll.moved = false;
