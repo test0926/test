@@ -122,14 +122,11 @@ function fullPage(target, obj){
 			var scroll = parseInt($target.scrollTop());
 			var scrollHeihgt = parseInt($target.prop('scrollHeight')-height);
 
-			alert('scroll : '+ scroll+' scheight : '+ scrollHeihgt + ' moved :'+that.scroll.moved )
-
 			if((scroll-scrollHeihgt) > 2 || scroll == 0){		
 				that.scroll.moved = false;
 			} else {
 				that.scroll.moved = true;
 			}
-				console.log(that.scroll.moved);
 		});
 
         this.$target.on("wheel mousewheel DOMMouseScroll",function(e){
