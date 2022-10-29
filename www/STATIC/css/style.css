@@ -1940,6 +1940,7 @@ footer .sns img {
     }
     #SCSVS .slide-inner {
         flex-grow: 1;
+        max-height: 310px;
     }
     #SCSVS .txt_head4 {
         word-break: keep-all;
