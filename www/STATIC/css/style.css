@@ -1959,7 +1959,7 @@ footer .sns img {
     }
     .slider-ddp .swiper-slide {
         width: 207px;
-        height: 308px;
+        height: 100%;
     }
     .ddp_content {
         padding: 40px 20px;
