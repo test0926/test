@@ -120,13 +120,14 @@ function fullPage(target, obj){
     		var $target = $(this);
 			var height = $target.outerHeight();
 			var scroll = parseInt($target.scrollTop());
-			var scrollHeihgt = parseInt($target.prop('scrollHeight')-height);
+			var scrollHeihgt = parsInt($target.prop('scrollHeight')-height);
 
-			if((scroll-scrollHeihgt) < 2 || scroll == 0){		
+			if(scroll >=  scrollHeihgt || scroll == 0){		
 				that.scroll.moved = false;
 			} else {
 				that.scroll.moved = true;
 			}
+				console.log(that.scroll.moved);
 		});
 
         this.$target.on("wheel mousewheel DOMMouseScroll",function(e){
