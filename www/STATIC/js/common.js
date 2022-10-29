@@ -122,7 +122,7 @@ function fullPage(target, obj){
 			var scroll = parseInt($target.scrollTop());
 			var scrollHeihgt = parseInt($target.prop('scrollHeight')-height);
 
-			if((scroll-scrollHeihgt) > 2 || scroll == 0){		
+			if((scroll-scrollHeihgt) < 2 || scroll == 0){		
 				that.scroll.moved = false;
 			} else {
 				that.scroll.moved = true;
