@@ -1191,17 +1191,25 @@ footer .sns img {
         z-index: 1;
     }
     .sc51cwe .swiper-container {
-        width: 440px;
+        width: 340px;
         margin: 0 auto;
         overflow: inherit;
+    }
+    .slider-rewardImage .swiper-slide {
+        transform: translate3d(-50px, 0, 0);
+        -webkit-transform: translate3d(-50px, 0, 0);
     }
     .slider-rewardImage .swiper-slide-prev {
         /*margin-right: 50px;*/
     }
     .slider-rewardImage .swiper-slide-active {
         transform: scale(1.2175);
-        margin-right: 50px;
-        margin-left: 50px;
+/*        margin-right: 50px;
+        margin-left: 50px;*/
+    }
+    .slider-rewardImage .swiper-slide-active ~ .swiper-slide {
+        transform: translate3d(50px, 0, 0);   
+        -webkit-transform: translate3d(50px, 0, 0);
     }
     .slider-rewardImage .swiper-slide-active img {  margin-top: 70px; width: 308px;  border: 8px solid #F8F8F9;}
     .slider-rewardImage {
@@ -1772,12 +1780,15 @@ footer .sns img {
         height: 16px;
         background-size: contain;
     }
-    .sc51cwe .swiper-container { width: 261px; }
+    .sc51cwe .swiper-container { width: 215px; }
     .slider-rewardImage .swiper-slide {
-        width: 261px;
         margin-top: 50px;
+        width: 215px;
         height: 362px;
         padding: 0 12px;
+
+        transform: translate3d(-20px, 0, 0);
+        -webkit-transform: translate3d(-20px, 0, 0);
     }
     .slider-rewardImage .swiper-slide-prev {
         text-align: right;
@@ -1789,9 +1800,12 @@ footer .sns img {
         width: 190px;
     }
     .slider-rewardImage .swiper-slide-active {
-        margin-left: 0;
-        margin-right: 0;
-        transform: scale(1);
+        transform: scale(1.2175) translate3d(0, 30px, 0);
+        -webkit-transform: scale(1.2175) translate3d(0, 30px, 0);
+    }
+    .slider-rewardImage .swiper-slide-active ~ .swiper-slide{
+        transform: translate3d(20px, 0, 0);
+        -webkit-transform: translate3d(20px, 0, 0);
     }
     .slider-rewardImage .swiper-slide-active img {
         width: 237px;
