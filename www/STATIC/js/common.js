@@ -111,7 +111,7 @@ function fullPage(target, obj){
         this.$section = this.$target.find('.section_wrap');
         this.$inner = $ ('.scroll-inner');
         this.obj = obj;
-        this.state.viewHeight = (screen.height * 0.01)*100;
+        this.state.viewHeight = window.innerHeight;
         console.log(this.state.viewHeight);
     }
     fullPage.prototype.initEvent = function(e){
@@ -262,7 +262,7 @@ function fullPage(target, obj){
     	this.$section.eq(this.state.index).addClass('active');
     }
     fullPage.prototype.resize = function(){
-    	this.state.viewHeight = (screen.height * 0.01)*100;
+    	this.state.viewHeight = window.innerHeight;
     	console.log(this.state.viewHeight);
     }
     this.init(target, obj);
@@ -295,7 +295,7 @@ $(window).on("scroll", function(){
 });
 
 function setScreenSize() {
-  let vh = screen.height * 0.01;
+  let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
