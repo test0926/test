@@ -111,10 +111,15 @@ function fullPage(target, obj){
         this.$section = this.$target.find('.section_wrap');
         this.$inner = $ ('.scroll-inner');
         this.obj = obj;
-        this.state.viewHeight = this.$target.height();
+        this.state.viewHeight = (window.innerHeight * 0.01)*100;
+        console.log(this.state.viewHeight);
     }
     fullPage.prototype.initEvent = function(e){
         var that = this;
+
+        window.addEventListener('resize', function(){
+        	that.resize();
+        });
 
       	this.$inner.scroll( function(e){
     		var $target = $(this);
@@ -256,6 +261,10 @@ function fullPage(target, obj){
     	this.$section.removeClass('active');
     	this.$section.eq(this.state.index).addClass('active');
     }
+    fullPage.prototype.resize = function(){
+    	this.state.viewHeight = (window.innerHeight * 0.01)*100;
+    	console.log(this.state.viewHeight);
+    }
     this.init(target, obj);
     this.initEvent();
 }
@@ -291,6 +300,7 @@ function setScreenSize() {
 }
 
 setScreenSize();
+window.addEventListener('resize', setScreenSize);
 
 $( function(){
 
