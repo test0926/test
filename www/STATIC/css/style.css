@@ -415,7 +415,10 @@ footer .sns img {
 }
 
 
-
+body,
+.main {
+    height: calc(var(--vh, 1vh) * 100);
+}
 
 /* 리워드 */
     .reward_list {
