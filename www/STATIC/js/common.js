@@ -123,14 +123,16 @@ function fullPage(target, obj){
 
       	this.$inner.scroll( function(e){
     		var $target = $(this);
-			var height = $target.outerHeight();
+			var height = window.innerHeight;
 			var scroll = parseInt($target.scrollTop());
-			var scrollHeihgt = parseInt($target.prop('scrollHeight')-height);
+			var scrollHeihgt = parseInt($target.prop('scrollHeight'));
 
-			if(scroll >=  scrollHeihgt || scroll == 0){		
-				that.scroll.moved = false;
+			var mH = scrollHeihgt-height;
+
+			if(scroll >=  mH || scroll == 0){		
+				that.scroll.moved = false; // 
 			} else {
-				that.scroll.moved = true;
+				that.scroll.moved = true; // scroll
 			}
 		});
 
