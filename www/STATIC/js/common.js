@@ -129,6 +129,7 @@ function fullPage(target, obj){
 
 			var mH = (scrollHeihgt-height)-2;
 
+			alert(scroll+' : '+mH);
 			if(scroll >=  mH || scroll == 0){		
 				that.scroll.moved = false; // 
 			} else {
