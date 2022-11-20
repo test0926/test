@@ -4,21 +4,24 @@
 	<meta name="code" charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes"/>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="STATIC/js/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="STATIC/js/common.js"></script>
+	<script type="text/javascript" src="STATIC/js/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="STATIC/js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="STATIC/js/jquery.fullpage.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="STATIC/css/jquery.fullpage.css"/>
 	<link rel="stylesheet" type="text/css" href="STATIC/css/style.css"/>
 </head>
 <body>
 	<header class="header">
 		<div class="inner flx_btw_center">
-			<div class="logo" onclick="movePage(0)"><img src="STATIC/img/asset/logo/logo_text.png"></div>
+			<div class="logo topBtn"><img src="STATIC/img/asset/logo/logo_text.png"></div>
 			<div class="gnb">
-				<ul>
-					<li><a href="javascript:movePage(0)">두둑</a></li>
-					<li><a href="javascript:movePage(3)">리워드</a></li>
-					<li><a href="javascript:movePage(8)">서비스</a></li>
-					<li><a href="javascript:movePage(9)">비즈니스</a></li>
+				<ul class="move-menu">
+					<li data-menuanchor="anchor1"><a href="#anchor1">두둑</a></li>
+					<li data-menuanchor="anchor4"><a href="#anchor4">리워드</a></li>
+					<li data-menuanchor="anchor9"><a href="#anchor9">서비스</a></li>
+					<li data-menuanchor="anchor10"><a href="#anchor10">비즈니스</a></li>
 					<li>
 						<div class="app_down_area">
 							<div class="btn">앱 다운로드</div>
@@ -38,912 +41,998 @@
 		</div>
 	</header>
 	<div class="m_gnb">
-		<ul>
-			<li><a href="javascript:movePage(0)">두둑</a></li>
-			<li><a href="javascript:movePage(3)">리워드</a></li>
-			<li><a href="javascript:movePage(8)">서비스</a></li>
-			<li><a href="javascript:movePage(9)">비즈니스</a></li>
+		<ul class="move-menu">
+			<li data-menuanchor="anchor1"><a href="#anchor1">두둑</a></li>
+			<li data-menuanchor="anchor4"><a href="#anchor4">리워드</a></li>
+			<li data-menuanchor="anchor9"><a href="#anchor9">서비스</a></li>
+			<li data-menuanchor="anchor10"><a href="#anchor10">비즈니스</a></li>
 		</ul>
 	</div>
 	<main class="main">
-		<div class="container">
-			<section class="section_wrap" id="SC-TOP">
-				<div class="inner">
-					<div class="txet">
-						<div class="txt_head4">
-							리워드를 모아서<br>
-							자유롭게 사용하는<br>
-							<span class="txt_line">All-in-One 앱테크 두둑</span>
-						</div>
-						<div class="txt_sub">
-							다양한 방식의 리워드 콘텐츠를 이용하여<br class="mbr">두둑 포인트(DDP)를 획득하고,<br>
-							다양한 제휴처에서 자유롭게 두둑 포인트(DDP)를 사용하세요.
-						</div>
-						<div class="app_down">
-							<a href="https://play.google.com/store/apps/details?id=com.stdmakers.doodook" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_google.png"></a>
-							<a href="https://apps.apple.com/kr/app/%EB%91%90%EB%91%91/id1622007179)" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_apple.png"></a>
-						</div>
-					</div>
-					<div class="img">
-						<div class="col">
-							<div class="item">
-								<img src="STATIC/img/asset/visual/top_01.png">
+		<div class="container" id="fullpage">
+			<section class="section section_first" id="section01">
+				<div class="section_wrap">
+					<div class="inner fxh">
+						<div class="txet">
+							<div class="txt_head4">
+								리워드를 모아서<br>
+								자유롭게 사용하는<br>
+								<span class="txt_line">All-in-One 앱테크 두둑</span>
 							</div>
-							<div class="item">
-								<div class="over">
-									<img src="STATIC/img/asset/visual/walk.png">	
+							<div class="txt_sub">
+								다양한 방식의 리워드 콘텐츠를 이용하여<br class="mbr">두둑 포인트(DDP)를 획득하고,<br>
+								다양한 제휴처에서 자유롭게 두둑 포인트(DDP)를 사용하세요.
+							</div>
+							<div class="app_down">
+								<a href="https://play.google.com/store/apps/details?id=com.stdmakers.doodook" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_google.png"></a>
+								<a href="https://apps.apple.com/kr/app/%EB%91%90%EB%91%91/id1622007179)" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_apple.png"></a>
+							</div>
+						</div>
+						<div class="img">
+							<div class="col">
+								<div class="item">
+									<img src="STATIC/img/asset/visual/top_01.png">
 								</div>
-								<img src="STATIC/img/asset/visual/top_02.png">
+								<div class="item">
+									<div class="over">
+										<img src="STATIC/img/asset/visual/walk.png">	
+									</div>
+									<img src="STATIC/img/asset/visual/top_02.png">
+								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="item">
-								<img src="STATIC/img/asset/visual/top_03.png">
+							<div class="col">
+								<div class="item">
+									<img src="STATIC/img/asset/visual/top_03.png">
+								</div>
+								<div class="item">
+									<img src="STATIC/img/asset/visual/top_04.png">
+								</div>
+								<div class="item">
+									<img src="STATIC/img/asset/visual/top_05.png">
+								</div>
 							</div>
-							<div class="item">
-								<img src="STATIC/img/asset/visual/top_04.png">
-							</div>
-							<div class="item">
-								<img src="STATIC/img/asset/visual/top_05.png">
-							</div>
-						</div>
-						<div class="col">
-							<div class="item">
-								<img src="STATIC/img/asset/visual/top_06.png">
-							</div>
-							<div class="item">
-								<img src="STATIC/img/asset/visual/top_07.png">
+							<div class="col">
+								<div class="item">
+									<img src="STATIC/img/asset/visual/top_06.png">
+								</div>
+								<div class="item">
+									<img src="STATIC/img/asset/visual/top_07.png">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section_wrap">
-				<div class="sc2-ad-area">
-					<div class="txt_head3">두둑을 통해 리워드를 쌓고</div>
-					<div class="slider-sc2AdF">
-						<div class="swiper-wrap">
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_01.png">
-								<p>만보기</p>
+			<section class="section" id="section02">
+				<div class="section_wrap">
+					<div class="sc2-ad-area">
+						<div class="txt_head3">두둑을 통해 리워드를 쌓고</div>
+						<div class="slider-sc2AdF">
+							<div class="swiper-wrap">
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_01.png">
+									<p>만보기</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_02.png">
+									<p>단순 리워드</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_03.png">
+									<p>제휴 리워드</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_04.png">
+									<p>커뮤니티</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_05.png">
+									<p>오퍼월</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_06.png">
+									<p>SNS 부스팅</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc2ad_07.png">
+									<p>데이터 리워드</p>
+								</div>
 							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_02.png">
-								<p>단순 리워드</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_03.png">
-								<p>제휴 리워드</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_04.png">
-								<p>커뮤니티</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_05.png">
-								<p>오퍼월</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_06.png">
-								<p>SNS 부스팅</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc2ad_07.png">
-								<p>데이터 리워드</p>
-							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
 						</div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
-					</div>
-					<div class="phone">
-						<img src="STATIC/img/asset/visual/phone.png">
+						<div class="phone">
+							<img src="STATIC/img/asset/visual/phone.png">
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section_wrap">
-				<div class="sc3-ad-area">
-					<div class="txt_head3">두둑을 통해 자유롭게 사용</div>
-					<div class="slider-sc3AdF">
-						<div class="swiper-wrap">
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc3ad_01.png">
-								<p>기프티콘</p>
+			<section class="section" id="section04">
+				<div class="section_wrap">
+					<div class="sc3-ad-area">
+						<div class="txt_head3">두둑을 통해 자유롭게 사용</div>
+						<div class="slider-sc3AdF">
+							<div class="swiper-wrap">
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc3ad_01.png">
+									<p>기프티콘</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc3ad_02.png">
+									<p>쇼핑</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc3ad_03.png">
+									<p>Raffle</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc3ad_04.png">
+									<p>포인트 결합</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc3ad_05.png">
+									<p>오프라인 결제</p>
+								</div>
+								<div class="slide2c">
+									<img src="STATIC/img/asset/visual/sc3ad_06.png">
+									<p>온라인 결제</p>
+								</div>
 							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc3ad_02.png">
-								<p>쇼핑</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc3ad_03.png">
-								<p>Raffle</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc3ad_04.png">
-								<p>포인트 결합</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc3ad_05.png">
-								<p>오프라인 결제</p>
-							</div>
-							<div class="slide">
-								<img src="STATIC/img/asset/visual/sc3ad_06.png">
-								<p>온라인 결제</p>
-							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
 						</div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
-					</div>
-					<div class="phone">
-						<img src="STATIC/img/asset/visual/phone.png">
+						<div class="phone">
+							<img src="STATIC/img/asset/visual/phone.png">
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section_wrap" id="SC-reward-main">
-				<div class="swiper-container slider-rewardText">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="txt_head3">한 눈에 보이는 리워드</div>
-							<div class="text">
-								내가 받을 수 있는 리워드를 한 눈에<br>
-								파악할 수 있는 <em>편리한 UI를 제공</em>합니다.
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="txt_head3">두둑한 쇼핑</div>
-							<div class="text">
-								기프티콘부터 오프라인 바코드 결제까지<br>
-								<em>다양한 DDP 사용 옵션을 제공</em>합니다.
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="txt_head3">걷기 챌린지</div>
-							<div class="text">
-								<em>한 걸음부터 걸음만큼 포인트</em>를 받을 수 있습니다.<br>
-								칼로리, 활동량 데이터는 덤으로 드립니다.
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="txt_head3">매일 두둑과 함께</div>
-							<div class="text">
-								두둑 개근하고 두둑한 포인트 받자!
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="txt_head3">행운뽑기</div>
-							<div class="text">
-								매일 두둑한 행운을 위한 도전!
-							</div>
-						</div>
-					</div>
-					<div class="swiper-button-prev slide-prev"></div>
-					<div class="swiper-button-next slide-next"></div>
-				</div>
-				<div class="sc51cwe">
-					<div class="swiper-container slider-rewardImage">
+			<section class="section" id="section05">
+				<div class="section_wrap">
+					<div class="swiper-container slider-rewardText">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_01.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_02.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_03.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_04.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="STATIC/img/asset/visual/reward_big_05.png">
-							</div>
-						</div>
-					</div>	
-				</div>	
-			</section>
-			<section class="section_wrap touchScroll">
-				<div class="inner center scroll-inner">
-					<div class="section-head-area">
-						<div class="txt_head4">리워드</div>
-					</div>
-					<div class="reward_list">
-						<ul>
-							<li>
-								<div class="reward_card">
-									<div>
-										<div class="num">리워드 1</div>
-										<div class="subject">간편하게<br> 리워드 받기</div>
-										<div class="desc">단순 반복성 콘텐츠<br> 이용하고 리워드 받자!</div>
-									</div>
-									<div class="icon">
-										<img src="STATIC/img/asset/visual/reward_icon_01.png">
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="reward_card">
-									<div>
-										<div class="num">리워드 2</div>
-										<div class="subject">많이<br> 리워드 받기</div>
-										<div class="desc">나에 대해 알려주고<br> 조금 더 리워드 받자!</div>
-									</div>
-									<div class="icon">
-										<img src="STATIC/img/asset/visual/reward_icon_02.png">
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="reward_card">
-									<div>
-										<div class="num">리워드 3</div>
-										<div class="subject">간편하게<br> 리워드 받기</div>
-										<div class="desc">SNS 영향력 활용해서<br> 리워드 받자!</div>
-									</div>
-									<div class="icon">
-										<img src="STATIC/img/asset/visual/reward_icon_03.png">
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="reward_card">
-									<div>
-										<div class="num">리워드 4</div>
-										<div class="subject">자유롭게<br> 리워드 사용하기</div>
-										<div class="desc">타 앱테크 서비스와<br> 차별화!</div>
-									</div>
-									<div class="icon">
-										<img src="STATIC/img/asset/visual/reward_icon_04.png">
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="section_wrap" id="SC-reward">
-				<div class="inner center">
-					<div class="section-head-area">
-						<div class="txt_tin txt_orange mb_16">리워드 1</div>
-						<div class="txt_head4 mb_34 txt_orange">간편하게 리워드 받기</div>
-						<div class="txt_24">단순 반복성 콘텐츠 이용하고 리워드 받자!</div>
-					</div>
-					<div class="swiper-container slider-reward">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">만보기</div>
-										<div class="txt_sm txt_bold">걸은만큼 돈이 되는 돈버는 만보기</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_01.png">
-									</div>
+								<div class="txt_head3">한 눈에 보이는 리워드</div>
+								<div class="text">
+									내가 받을 수 있는 리워드를 한 눈에<br>
+									파악할 수 있는 <em>편리한 UI를 제공</em>합니다.
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">출석체크</div>
-										<div class="txt_sm txt_bold">매일매일 출첵 하고 리워드 획득</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_02.png">
-									</div>
+								<div class="txt_head3">두둑한 쇼핑</div>
+								<div class="text">
+									기프티콘부터 오프라인 바코드 결제까지<br>
+									<em>다양한 DDP 사용 옵션을 제공</em>합니다.
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">행운뽑기</div>
-										<div class="txt_sm txt_bold">오늘의 운에 따라 리워드 당첨</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_03.png">
-									</div>
+								<div class="txt_head3">걷기 챌린지</div>
+								<div class="text">
+									<em>한 걸음부터 걸음만큼 포인트</em>를 받을 수 있습니다.<br>
+									칼로리, 활동량 데이터는 덤으로 드립니다.
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">리워드</div>
-										<div class="txt_sm txt_bold">액션 별 추가 리워드도 획득</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_04.png">
-									</div>
+								<div class="txt_head3">매일 두둑과 함께</div>
+								<div class="text">
+									두둑 개근하고 두둑한 포인트 받자!
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="txt_head3">행운뽑기</div>
+								<div class="text">
+									매일 두둑한 행운을 위한 도전!
 								</div>
 							</div>
 						</div>
-						<div class="swiper-pagination reward-pagination"></div>
-					</div>	
+						<div class="swiper-button-prev slide-prev"></div>
+						<div class="swiper-button-next slide-next"></div>
+					</div>
+					<div class="sc51cwe">
+						<div class="swiper-container slider-rewardImage">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="STATIC/img/asset/visual/reward_big_01.png">
+								</div>
+								<div class="swiper-slide">
+									<img src="STATIC/img/asset/visual/reward_big_02.png">
+								</div>
+								<div class="swiper-slide">
+									<img src="STATIC/img/asset/visual/reward_big_03.png">
+								</div>
+								<div class="swiper-slide">
+									<img src="STATIC/img/asset/visual/reward_big_04.png">
+								</div>
+								<div class="swiper-slide">
+									<img src="STATIC/img/asset/visual/reward_big_05.png">
+								</div>
+							</div>
+						</div>	
+					</div>
 				</div>
 			</section>
-			<section class="section_wrap" id="SC-reward2">
-				<div class="inner center">
-					<div class="section-head-area">
-						<div class="txt_tin txt_orange mb_16">리워드 2</div>
-						<div class="txt_head4 mb_34 txt_orange">조금 더 리워드 받기</div>
-						<div class="txt_24">나에 대해 알려주고 조금 더 리워드 받자!</div>
-					</div>
-					<div class="swiper-container slider-reward2">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">퀴즈풀기</div>
-										<div class="txt_sm txt_bold">간단한 퀴즈 맞추고, 리워드 받기</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_05.png">
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">설문조사</div>
-										<div class="txt_sm txt_bold">주제별로 나의 의견을 간단히 알려주고 리워드 받기</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_06.png">
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">밸런스 게임</div>
-										<div class="txt_sm txt_bold">내가 더 좋아하는 취향 알려주고 리워드 받기</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_07.png">
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="rewrad_content">
-									<div class="text_box">
-										<div class="txt_head6">커뮤니티</div>
-										<div class="txt_sm txt_bold">재테크, 핫딜 등 사용자간 정보 교환 및 소통하고 리워드 받기</div>
-									</div>
-									<div class="img_box">
-										<img src="STATIC/img/asset/visual/reward_08.png">
-									</div>
-								</div>
-							</div>
+			<section class="section" id="section06">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area">
+							<div class="txt_head4">리워드</div>
 						</div>
-						<div class="swiper-pagination reward2-pagination"></div>
-					</div>	
-				</div>
-			</section>
-			<section class="section_wrap mpd0">
-				<div class="inner center">
-					<div class="section-head-area mb_64">
-						<div class="txt_tin txt_orange mb_16">리워드 3</div>
-						<div class="txt_head4 mb_34 txt_orange">많이 리워드 받기</div>
-						<div class="txt_24">SNS 활용해서 광고 효과 만들어 내고 리워드 받자!</div>
-					</div>
-					<div class="reward_map">
-						<div class="txt_head6">제휴마케팅 구조</div>
-						<div class="map">
-							<img src="STATIC/img/asset/visual/reward_map.png">
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="section_wrap scroll-inner" id="SCSVS">
-				<div class="inner">
-					<div class="section-head-area">
-						<div class="txt_tin txt_orange mb_16">리워드 사용</div>
-						<div class="txt_head4 mb_34 txt_orange">다양한 사용처에서<br> 자유롭게<br class="mbr"> 사용하는 리워드(DDP)</div>
-						<div class="txt_24">O2O 결제, 포인트 전송 등 내 리워드의 가치를 높일 수 있는 핀테크 기술 접목</div>
-					</div>
-					<div class="slide_guide_txt">옆으로 넘겨주세요.<img src="STATIC/img/asset/visual/slide_arrow.png"></div>
-				</div>
-				<div class="slide-inner">
-					<div class="swiper-container slider-ddp">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">01</div>
-									<div class="subject">기프트콘</div>
-									<div class="desc">DDP를 사용하여 다양한<br>기프티콘 구매</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">02</div>
-									<div class="subject">두둑 마켓</div>
-									<div class="desc">DDP를 사용하여 광고주 및 <br>일반 상품 구매</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">03</div>
-									<div class="subject">마이쿠폰</div>
-									<div class="desc">기프티콘 및 쿠폰 보관함</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">04</div>
-									<div class="subject">오프라인 결제</div>
-									<div class="desc">DDP를 사용하여<br>오프라인 제휴처 결제</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">05</div>
-									<div class="subject">포인트 출금</div>
-									<div class="desc">DDP 출금</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">06</div>
-									<div class="subject">포인트 교환</div>
-									<div class="desc">DDP ⇄ 타사 포인트 양방향 교환</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="ddp_content">
-									<div class="num">07</div>
-									<div class="subject">포인트 전송</div>
-									<div class="desc">회원 계정 간, DDP 전송</div>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</section>
-			<section class="section_wrap touchScroll" id="SCBNS">
-				<div class="inner center scroll-inner">
-					<div class="section-head-area">
-						<div class="txt_head4 mb_34">Reward Economy</div>
-						<div class="txt_24">고객은 두둑을 통해 광고효과를 창출하고, <br>광고주는 고객에게<br class="mbr"> 광고효과에 대한 보상을 두둑을 통해 지급합니다.</div>
-					</div>
-					<div class="swiper-container slider-BNS">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="BNS_area">
-									<div>
-										<div class="circle">광고주</div>
-									</div>
-									<div>
-										<div class="group">
-											<div>광고 · 홍보 콘텐츠 제공</div>
-											<div class="bns_arrow"></div>
-											<div>광고 효과에 따른<br>비용 청구</div>
+						<div class="reward_list">
+							<ul>
+								<li>
+									<div class="reward_card">
+										<div>
+											<div class="num">리워드 1</div>
+											<div class="subject">간편하게<br> 리워드 받기</div>
+											<div class="desc">단순 반복성 콘텐츠<br> 이용하고 리워드 받자!</div>
+										</div>
+										<div class="icon">
+											<img src="STATIC/img/asset/visual/reward_icon_01.png">
 										</div>
 									</div>
-									<div>
-										<div class="title">두둑</div>
-									</div>
-									<div>
-										<div class="group">
-											<div>광고 효과 기여도에 따라<br>리워드 지급</div>
-											<div class="bns_arrow"></div>
-											<div>콘텐츠를 소비하고<br>광고 효과 생성</div>
+								</li>
+								<li>
+									<div class="reward_card">
+										<div>
+											<div class="num">리워드 2</div>
+											<div class="subject">많이<br> 리워드 받기</div>
+											<div class="desc">나에 대해 알려주고<br> 조금 더 리워드 받자!</div>
+										</div>
+										<div class="icon">
+											<img src="STATIC/img/asset/visual/reward_icon_02.png">
 										</div>
 									</div>
-									<div>
-										<div class="circle">고객</div>
+								</li>
+								<li>
+									<div class="reward_card">
+										<div>
+											<div class="num">리워드 3</div>
+											<div class="subject">간편하게<br> 리워드 받기</div>
+											<div class="desc">SNS 영향력 활용해서<br> 리워드 받자!</div>
+										</div>
+										<div class="icon">
+											<img src="STATIC/img/asset/visual/reward_icon_03.png">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="reward_card">
+										<div>
+											<div class="num">리워드 4</div>
+											<div class="subject">자유롭게<br> 리워드 사용하기</div>
+											<div class="desc">타 앱테크 서비스와<br> 차별화!</div>
+										</div>
+										<div class="icon">
+											<img src="STATIC/img/asset/visual/reward_icon_04.png">
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section" id="section07">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area">
+							<div class="txt_tin txt_orange mb_16">리워드 1</div>
+							<div class="txt_head4 mb_34 txt_orange">간편하게 리워드 받기</div>
+							<div class="txt_24">단순 반복성 콘텐츠 이용하고 리워드 받자!</div>
+						</div>
+						<div class="swiper-container slider-reward">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">만보기</div>
+											<div class="txt_sm txt_bold">걸은만큼 돈이 되는 돈버는 만보기</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_01.png">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">출석체크</div>
+											<div class="txt_sm txt_bold">매일매일 출첵 하고 리워드 획득</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_02.png">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">행운뽑기</div>
+											<div class="txt_sm txt_bold">오늘의 운에 따라 리워드 당첨</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_03.png">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">리워드</div>
+											<div class="txt_sm txt_bold">액션 별 추가 리워드도 획득</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_04.png">
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="BNS_area">
-									<div>
-										<div class="circle">제휴처<br>(광고주)</div>
-									</div>
-									<div>
-										<div class="group">
-											<div>상품 ∙ 서비스 공급</div>
-											<div class="bns_arrow"></div>
-											<div>판매 대금 지급</div>
+							<div class="swiper-pagination reward-pagination"></div>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<section class="section" id="section08">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area">
+							<div class="txt_tin txt_orange mb_16">리워드 2</div>
+							<div class="txt_head4 mb_34 txt_orange">조금 더 리워드 받기</div>
+							<div class="txt_24">나에 대해 알려주고 조금 더 리워드 받자!</div>
+						</div>
+						<div class="swiper-container slider-reward2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">퀴즈풀기</div>
+											<div class="txt_sm txt_bold">간단한 퀴즈 맞추고, 리워드 받기</div>
 										</div>
-									</div>
-									<div>
-										<div class="title">두둑</div>
-									</div>
-									<div>
-										<div class="group">
-											<div>상품 ∙ 서비스 공급</div>
-											<div class="bns_arrow"></div>
-											<div>DDP 사용(구매)</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_05.png">
 										</div>
-									</div>
-									<div>
-										<div class="circle">고객</div>
 									</div>
 								</div>
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">설문조사</div>
+											<div class="txt_sm txt_bold">주제별로 나의 의견을 간단히 알려주고 리워드 받기</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_06.png">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">밸런스 게임</div>
+											<div class="txt_sm txt_bold">내가 더 좋아하는 취향 알려주고 리워드 받기</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_07.png">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="rewrad_content">
+										<div class="text_box">
+											<div class="txt_head6">커뮤니티</div>
+											<div class="txt_sm txt_bold">재테크, 핫딜 등 사용자간 정보 교환 및 소통하고 리워드 받기</div>
+										</div>
+										<div class="img_box">
+											<img src="STATIC/img/asset/visual/reward_08.png">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination reward2-pagination"></div>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<section class="section" id="section09">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area mb_64">
+							<div class="txt_tin txt_orange mb_16">리워드 3</div>
+							<div class="txt_head4 mb_34 txt_orange">많이 리워드 받기</div>
+							<div class="txt_24">SNS 활용해서 광고 효과 만들어 내고 리워드 받자!</div>
+						</div>
+						<div class="reward_map">
+							<div class="txt_head6">제휴마케팅 구조</div>
+							<div class="map">
+								<img src="STATIC/img/asset/visual/reward_map.png">
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section" id="section10">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area">
+							<div class="txt_tin txt_orange mb_16">리워드 사용</div>
+							<div class="txt_head4 mb_34 txt_orange">다양한 사용처에서<br> 자유롭게<br class="mbr"> 사용하는 리워드(DDP)</div>
+							<div class="txt_24">O2O 결제, 포인트 전송 등 내 리워드의 가치를 높일 수 있는 핀테크 기술 접목</div>
+						</div>
+						<div class="slide_guide_txt">옆으로 넘겨주세요.<img src="STATIC/img/asset/visual/slide_arrow.png"></div>
+					</div>
+					<div class="slide-inner">
+						<div class="swiper-container slider-ddp">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">01</div>
+										<div class="subject">기프트콘</div>
+										<div class="desc">DDP를 사용하여 다양한<br>기프티콘 구매</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">02</div>
+										<div class="subject">두둑 마켓</div>
+										<div class="desc">DDP를 사용하여 광고주 및 <br>일반 상품 구매</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">03</div>
+										<div class="subject">마이쿠폰</div>
+										<div class="desc">기프티콘 및 쿠폰 보관함</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">04</div>
+										<div class="subject">오프라인 결제</div>
+										<div class="desc">DDP를 사용하여<br>오프라인 제휴처 결제</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">05</div>
+										<div class="subject">포인트 출금</div>
+										<div class="desc">DDP 출금</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">06</div>
+										<div class="subject">포인트 교환</div>
+										<div class="desc">DDP ⇄ 타사 포인트 양방향 교환</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ddp_content">
+										<div class="num">07</div>
+										<div class="subject">포인트 전송</div>
+										<div class="desc">회원 계정 간, DDP 전송</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<section class="section" id="section11">
+				<div class="section_wrap">
+					<div class="inner center scroll-inner">
+						<div class="section-head-area">
+							<div class="txt_head4 mb_34">Reward Economy</div>
+							<div class="txt_24">고객은 두둑을 통해 광고효과를 창출하고, <br>광고주는 고객에게<br class="mbr"> 광고효과에 대한 보상을 두둑을 통해 지급합니다.</div>
+						</div>
+						<div class="swiper-container slider-BNS">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="BNS_area">
+										<div>
+											<div class="circle">광고주</div>
+										</div>
+										<div>
+											<div class="group">
+												<div>광고 · 홍보 콘텐츠 제공</div>
+												<div class="bns_arrow"></div>
+												<div>광고 효과에 따른<br>비용 청구</div>
+											</div>
+										</div>
+										<div>
+											<div class="title">두둑</div>
+										</div>
+										<div>
+											<div class="group">
+												<div>광고 효과 기여도에 따라<br>리워드 지급</div>
+												<div class="bns_arrow"></div>
+												<div>콘텐츠를 소비하고<br>광고 효과 생성</div>
+											</div>
+										</div>
+										<div>
+											<div class="circle">고객</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="BNS_area">
+										<div>
+											<div class="circle">제휴처<br>(광고주)</div>
+										</div>
+										<div>
+											<div class="group">
+												<div>상품 ∙ 서비스 공급</div>
+												<div class="bns_arrow"></div>
+												<div>판매 대금 지급</div>
+											</div>
+										</div>
+										<div>
+											<div class="title">두둑</div>
+										</div>
+										<div>
+											<div class="group">
+												<div>상품 ∙ 서비스 공급</div>
+												<div class="bns_arrow"></div>
+												<div>DDP 사용(구매)</div>
+											</div>
+										</div>
+										<div>
+											<div class="circle">고객</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-						<div class="swiper-pagination"></div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section_wrap touchScroll" id="MKAD">
-				<div class="inner center scroll-inner">
-					<div class="section-head-area">
-						<div class="txt_head4 mb_34">리워드를 통한 생태계 조성 :<br class="mbr"> 두둑마켓</div>
-						<div class="txt_24 mb_40">
-							<ul class="list">
-								<li>광고주 제품 및 쿠폰 등의 특전을 두둑마켓에서 판매</li>
-								<li>광고주의 광고비가 고객의 리워드 사용으로 광고주에게 돌아가는 선순환 생태계 조성</li>
-							</ul>
+			<section class="section" id="section12">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area">
+							<div class="txt_head4 mb_34">리워드를 통한 생태계 조성 :<br class="mbr"> 두둑마켓</div>
+							<div class="txt_24 mb_40">
+								<ul class="list">
+									<li>광고주 제품 및 쿠폰 등의 특전을 두둑마켓에서 판매</li>
+									<li>광고주의 광고비가 고객의 리워드 사용으로 광고주에게 돌아가는 선순환 생태계 조성</li>
+								</ul>
+							</div>
+						</div>
+						<div class="market_area">
+							<div class="item">
+								<div class="imgbox">
+									<div>
+										<img src="STATIC/img/asset/visual/market_01.png">
+										<div class="arrow">
+											<img src="STATIC/img/asset/visual/Arrow2.png">
+										</div>
+									</div>
+								</div>
+								<div class="txt_sm"><기존 앱테크></div>
+								<div>리워드 지급 후, 연결 고리 단절</div>
+							</div>
+							<div class="item">
+								<div class="imgbox">
+									<div>
+										<img src="STATIC/img/asset/visual/market_02_circle.png" class="circle">
+										<img src="STATIC/img/asset/visual/market_02.png" class="round">
+									</div>
+								</div>
+								<div class="txt_sm txt_orange txt_bold"><두둑 생태계></div>
+								<div>리워드 지급 후, 광고주와 순환</div>
+							</div>
 						</div>
 					</div>
-					<div class="market_area">
-						<div class="item">
-							<div class="imgbox">
-								<div>
-									<img src="STATIC/img/asset/visual/market_01.png">
-									<div class="arrow">
-										<img src="STATIC/img/asset/visual/Arrow2.png">
+				</div>
+			</section>
+			<section class="section ani" id="section13">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="section-head-area">
+							<div class="txt_head4">로드맵</div>
+						</div>
+					</div>
+					<div class="slide-inner">
+						<div class="swiper-container slider-roadmap">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="roadmap-item">
+										<div class="year">2021년</div>
+										<div class="line active" data-delay="1000">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">Q4</div>
+												<ul>
+													<li>㈜스탠다드메이커스 설립</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="roadmap-item">
+										<div class="year">2022년</div>
+										<div class="line active" data-delay="1500">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">Q1</div>
+												<ul>
+													<li>리워드 관련 특허 <br>및 상표권 출원</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="roadmap-item">
+										<div class="line half" data-delay="2000">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">Q2</div>
+												<ul>
+													<li>리워드 제휴 계약 체결<br>(버즈빌)</li>
+													<li>리워드 제휴 계약 체결<br>(핀크럭스)</li>
+													<li><div class="txt_etbold"><span class="txt_line">두둑 1.0 런칭</span><br> (Android / iOS)</div></li>
+													<li>기프티콘 쇼핑 오픈</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="roadmap-item disabled">
+										<div class="line">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">Q3,4</div>
+												<ul>
+													<li>리워드 확대 (기존 내용)</li>
+													<li>사용처 확대 (기존 내용에서<br>기프티콘 제외)</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="roadmap-item disabled">
+										<div class="year">2023년</div>
+										<div class="line">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">리워드 확대</div>
+												<ul>
+													<li>제휴 리워드 고도화</li>
+												</ul>
+											</div>
+											<div class="group">
+												<div class="title">사용처 확대</div>
+												<ul>
+													<li>두둑마켓</li>
+													<li>오프라인 결제</li>
+												</ul>
+											</div>
+											<div class="group">
+												<div class="title">수익모델 확대</div>
+												<ul>
+													<li>인앱 광고 패키지</li>
+													<li>빅데이터 거래</li>
+												</ul>
+											</div>
+											<div class="group">
+												<div class="title">해외진출</div>
+												<ul>
+													<li>동남아시아 서비스 오픈</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="roadmap-item disabled">
+										<div class="year">2024년</div>
+										<div class="line">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">리워드 확대</div>
+												<ul>
+													<li>라이브 커머스</li>
+													<li>O2O리워드</li>
+												</ul>
+											</div>
+											<div class="group">
+												<div class="title">수익모델 확대</div>
+												<ul>
+													<li>광고 패키지</li>
+													<li>개인화 광고(빅데이터)</li>
+												</ul>
+											</div>
+											<div class="group">
+												<div class="title">해외진출</div>
+												<ul>
+													<li>동남아시아 서비스 확대</li>
+													<li>진출 국가 간 부분 연동 진행</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="roadmap-item disabled">
+										<div class="year">2025년</div>
+										<div class="line">
+											<div class="bar"></div>
+										</div>
+										<div class="info">
+											<div class="group">
+												<div class="title">해외진출</div>
+												<ul>
+													<li>동남아시아 진출 확대</li>
+													<li>진출 국가 간 full 서비스 연동</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="txt_sm"><기존 앱테크></div>
-							<div>리워드 지급 후, 연결 고리 단절</div>
-						</div>
-						<div class="item">
-							<div class="imgbox">
-								<div>
-									<img src="STATIC/img/asset/visual/market_02_circle.png" class="circle">
-									<img src="STATIC/img/asset/visual/market_02.png" class="round">
-								</div>
-							</div>
-							<div class="txt_sm txt_orange txt_bold"><두둑 생태계></div>
-							<div>리워드 지급 후, 광고주와 순환</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section_wrap ani touchScroll scroll-inner" id="roadMap">
+			<section class="section" id="section14">
+				<div class="section_wrap">
+					<div class="inner">
+						<div class="text">
+							<div class="txt_head2">지금 바로<br><span class="txt_line">두둑하세요!</span></div>
+							<div class="app_down">
+								<a href="https://play.google.com/store/apps/details?id=com.stdmakers.doodook" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_google.png"></a>
+								<a href="https://apps.apple.com/kr/app/%EB%91%90%EB%91%91/id1622007179)" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_apple.png"></a>
+							</div>
+						</div>
+						<div class="img">
+							<img src="STATIC/img/asset/visual/app.png">
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="section fp-auto-height" id="section15">
 				<div class="inner">
-					<div class="section-head-area">
-						<div class="txt_head4">로드맵</div>
+					<div class="scrollTop topBtn" onclick="movePage(0)">
+						<img src="STATIC/img/asset/icon/icon_top.png">
+						<p>위로</p>
 					</div>
-				</div>
-				<div class="slide-inner">
-					<div class="swiper-container slider-roadmap">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="roadmap-item">
-									<div class="year">2021년</div>
-									<div class="line active" data-delay="1000">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">Q4</div>
-											<ul>
-												<li>㈜스탠다드메이커스 설립</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+					<div>
+						<div class="compn">주식회사 스탠다드메이커스</div>
+						<div class="gnb_area">
+							<div class="gnb">
+								<ul>
+									<li><a href="">White Paper</a></li>
+									<li><a href="terms01.html" target="blink">개인정보처리방침</a></li>
+									<li><a href="terms02.html" target="blink">이용약관</a></li>
+								</ul>
 							</div>
-							<div class="swiper-slide">
-								<div class="roadmap-item">
-									<div class="year">2022년</div>
-									<div class="line active" data-delay="1500">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">Q1</div>
-											<ul>
-												<li>리워드 관련 특허 <br>및 상표권 출원</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<div class="sns">
+								<ul>
+									<li><a target="blink" href="https://www.facebook.com/people/%EB%91%90%EB%91%91-%EC%9E%98%EB%B2%84%EB%8A%94%EC%95%B1%ED%85%8C%ED%81%AC/100083960261876/"><img src="STATIC/img/asset/icon/sns_facebook.png"></a></li>
+									<li><a target="blink" href="https://instagram.com/doodook_app?igshid=YmMyMTA2M2Y="><img src="STATIC/img/asset/icon/sns_instar.png"></a></li>
+									<li><a target="blink" href="https://blog.naver.com/doodookdoodook"><img src="STATIC/img/asset/icon/sns_blog.png"></a></li>
+									<li><a target="blink" href=""><img src="STATIC/img/asset/icon/sns_mail.png"></a></li>
+								</ul>
 							</div>
-							<div class="swiper-slide">
-								<div class="roadmap-item">
-									<div class="line half" data-delay="2000">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">Q2</div>
-											<ul>
-												<li>리워드 제휴 계약 체결<br>(버즈빌)</li>
-												<li>리워드 제휴 계약 체결<br>(핀크럭스)</li>
-												<li><div class="txt_etbold"><span class="txt_line">두둑 1.0 런칭</span><br> (Android / iOS)</div></li>
-												<li>기프티콘 쇼핑 오픈</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="roadmap-item disabled">
-									<div class="line">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">Q3,4</div>
-											<ul>
-												<li>리워드 확대 (기존 내용)</li>
-												<li>사용처 확대 (기존 내용에서<br>기프티콘 제외)</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="roadmap-item disabled">
-									<div class="year">2023년</div>
-									<div class="line">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">리워드 확대</div>
-											<ul>
-												<li>제휴 리워드 고도화</li>
-											</ul>
-										</div>
-										<div class="group">
-											<div class="title">사용처 확대</div>
-											<ul>
-												<li>두둑마켓</li>
-												<li>오프라인 결제</li>
-											</ul>
-										</div>
-										<div class="group">
-											<div class="title">수익모델 확대</div>
-											<ul>
-												<li>인앱 광고 패키지</li>
-												<li>빅데이터 거래</li>
-											</ul>
-										</div>
-										<div class="group">
-											<div class="title">해외진출</div>
-											<ul>
-												<li>동남아시아 서비스 오픈</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="roadmap-item disabled">
-									<div class="year">2024년</div>
-									<div class="line">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">리워드 확대</div>
-											<ul>
-												<li>라이브 커머스</li>
-												<li>O2O리워드</li>
-											</ul>
-										</div>
-										<div class="group">
-											<div class="title">수익모델 확대</div>
-											<ul>
-												<li>광고 패키지</li>
-												<li>개인화 광고(빅데이터)</li>
-											</ul>
-										</div>
-										<div class="group">
-											<div class="title">해외진출</div>
-											<ul>
-												<li>동남아시아 서비스 확대</li>
-												<li>진출 국가 간 부분 연동 진행</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="roadmap-item disabled">
-									<div class="year">2025년</div>
-									<div class="line">
-										<div class="bar"></div>
-									</div>
-									<div class="info">
-										<div class="group">
-											<div class="title">해외진출</div>
-											<ul>
-												<li>동남아시아 진출 확대</li>
-												<li>진출 국가 간 full 서비스 연동</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
+						</div>
+						<div class="info">
+							<p>대표자 : 이현우&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;사업자 번호 : 230-87-02008 </p>
+							<p>사업장 소재지 : 서울시 금천구 디지털로 9길 41<br class="mbr"> 삼성IT해링턴타워 509호</p>
+							<p>문의메일 : contact@doodook.co.kr&nbsp;&nbsp;&nbsp;<span class="mnone">|</span>&nbsp;&nbsp;&nbsp;<br class="mbr"> 고객센터 : 02-6959-8004</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="section_wrap" id="DWLD">
-				<div class="inner">
-					<div class="text">
-						<div class="txt_head2">지금 바로<br><span class="txt_line">두둑하세요!</span></div>
-						<div class="app_down">
-							<a href="https://play.google.com/store/apps/details?id=com.stdmakers.doodook" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_google.png"></a>
-							<a href="https://apps.apple.com/kr/app/%EB%91%90%EB%91%91/id1622007179)" class="btn" target="blink"><img src="STATIC/img/asset/visual/btn_apple.png"></a>
-						</div>
-					</div>
-					<div class="img">
-						<img src="STATIC/img/asset/visual/app.png">
-					</div>
-				</div>
-			</section>
-			<footer>
-			<div class="inner">
-				<div class="scrollTop" onclick="movePage(0)">
-					<img src="STATIC/img/asset/icon/icon_top.png">
-					<p>위로</p>
-				</div>
-				<div>
-					<div class="compn">주식회사 스탠다드메이커스</div>
-					<div class="gnb_area">
-						<div class="gnb">
-							<ul>
-								<li><a href="">White Paper</a></li>
-								<li><a href="terms01.html" target="blink">개인정보처리방침</a></li>
-								<li><a href="terms02.html" target="blink">이용약관</a></li>
-							</ul>
-						</div>
-						<div class="sns">
-							<ul>
-								<li><a target="blink" href="https://www.facebook.com/people/%EB%91%90%EB%91%91-%EC%9E%98%EB%B2%84%EB%8A%94%EC%95%B1%ED%85%8C%ED%81%AC/100083960261876/"><img src="STATIC/img/asset/icon/sns_facebook.png"></a></li>
-								<li><a target="blink" href="https://instagram.com/doodook_app?igshid=YmMyMTA2M2Y="><img src="STATIC/img/asset/icon/sns_instar.png"></a></li>
-								<li><a target="blink" href="https://blog.naver.com/doodookdoodook"><img src="STATIC/img/asset/icon/sns_blog.png"></a></li>
-								<li><a target="blink" href=""><img src="STATIC/img/asset/icon/sns_mail.png"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="info">
-						<p>대표자 : 이현우&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;사업자 번호 : 230-87-02008 </p>
-						<p>사업장 소재지 : 서울시 금천구 디지털로 9길 41<br class="mbr"> 삼성IT해링턴타워 509호</p>
-						<p>문의메일 : contact@doodook.co.kr&nbsp;&nbsp;&nbsp;<span class="mnone">|</span>&nbsp;&nbsp;&nbsp;<br class="mbr"> 고객센터 : 02-6959-8004</p>
-					</div>
-				</div>
-			</div>
-		</footer>
+			</footer>
 		</div>
 	</main>
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	    	var slidesc2AdF = null,
+				slidesc3AdF = null,
+				slideReward = null,
+				slideReward2 = null;
+
+			$('.app_down_area .btn').on('click', function(){
+				var $this = $(this);
+				$this.toggleClass('active');
+				if($this.hasClass('active')){
+					$('.app_down_area .drop').fadeIn(0);
+				} else {
+					$('.app_down_area .drop').fadeOut(0);
+				}
+			});
+
+			var slideRewardImage = new Swiper(".slider-rewardImage", {
+				slidesPerView: 'auto',
+				slidesPerGroup : 1,
+				autoResize: true,
+				allowTouchMove: false,
+				loop: true,
+				autoplay: {    
+					delay: 3000,      
+					disableOnInteraction: false,  
+				},
+				navigation: {
+					nextEl: ".slide-next",
+					prevEl: ".slide-prev",
+				},
+			});
+
+			var slideRewardText = new Swiper(".slider-rewardText", {
+				slidesPerView: 1,
+				slidesPerGroup : 1,
+				autoResize: true,
+				centeredSlides: true,
+				allowTouchMove: false,
+				effect : 'fade',
+				autoplay: {    
+					delay: 3000,      
+					disableOnInteraction: false,  
+				},
+				loop: true,
+				navigation: {
+					nextEl: ".slide-next",
+					prevEl: ".slide-prev",
+				},
+			});
+
+			var slideRoadMap = new Swiper(".slider-roadmap", {
+				slidesPerView: 'auto',
+				slidesPerGroup : 1,
+				autoResize: true,
+				centeredSlides: false,
+			});
+
+			var slideDDP = new Swiper(".slider-ddp", {
+				slidesPerView: 'auto',
+				slidesPerGroup : 1,
+				autoResize: true,
+				centeredSlides: false,
+			});
+
+
+			var slideinside = new Swiper(".slider-reward", {
+				slidesPerView: 'auto',
+				slidesPerGroup : 1,
+				autoResize: true,
+				centeredSlides: false,		
+				effect : 'fade',
+				speed: 700,
+				pagination: {
+		        	el: ".reward-pagination",
+		        },
+		        mousewheel: {
+			    	invert: false,
+			  	},
+		        on: {
+					slideChangeTransitionEnd: function (swiper) {
+						var realIndex = swiper.realIndex;
+						if(realIndex == 0 || realIndex == 3){
+							$.fn.fullpage.setAllowScrolling(true);
+						}
+					}
+				},
+			});
+
+			var slideinside2 = new Swiper(".slider-reward2", {
+				slidesPerView: 'auto',
+				slidesPerGroup : 1,
+				autoResize: true,
+				centeredSlides: false,
+				effect : 'fade',
+				speed: 700,
+				pagination: {
+		        	el: ".reward2-pagination",
+		        },
+		        mousewheel: {
+			    	invert: false,
+			  	},
+		        on: {
+					slideChangeTransitionEnd: function (swiper) {
+						var realIndex = swiper.realIndex;
+						if(realIndex == 0 || realIndex == 3){
+							$.fn.fullpage.setAllowScrolling(true);
+						}
+					}
+				},
+			});
+
+			var slideBNS = new Swiper(".slider-BNS", {
+				slidesPerView: 1,
+				slidesPerGroup : 1,
+				autoResize: true,
+				centeredSlides: false,
+				spped : 400,
+				pagination: {
+		        	el: ".swiper-pagination",
+		        },
+		        mousewheel: {
+			    	invert: false,
+			  	},
+		        on: {
+					slideChangeTransitionEnd: function (swiper) {
+						$.fn.fullpage.setAllowScrolling(true);
+					}
+				},
+			});
+
+
+	        $('#fullpage').fullpage({
+	            verticalCentered: true,
+	            anchors: ['anchor1','anchor2','anchor3','anchor4','anchor5','anchor6','anchor7','anchor8','anchor9','anchor10','anchor111','anchor112','anchor113','anchor114'],
+	            menu: '.move-menu',
+	            scrollOverflow: true,
+	            onLeave: function(index, nextIndex, direction){
+	            	var windowWidth = $( window ).width();
+	 				if(windowWidth > 1024) {
+						if(nextIndex == 6){
+							$.fn.fullpage.setAllowScrolling(false);
+						} else if(nextIndex == 7){
+							$.fn.fullpage.setAllowScrolling(false);
+						} else if(nextIndex == 10){
+							$.fn.fullpage.setAllowScrolling(false);
+						} else {
+							$.fn.fullpage.setAllowScrolling(true);
+						}
+	 				} else {
+	 					$.fn.fullpage.setAllowScrolling(true);
+	 				}
+				},
+	        });
+
+		    var slideAD = new SlideCT('.slider-sc2AdF', {
+			
+			});
+
+			var slideAD2 = new SlideCT('.slider-sc3AdF', {
+				
+			});
+
+
+			$(window).bind('wheel mousewheel DOMMouseScroll', function(e){
+			 	var index = $('.section.active').index()+1;
+				if(e.originalEvent.wheelDelta/60 > 0) {
+					if(index == 6 && slideinside.realIndex == 0){
+						$.fn.fullpage.setAllowScrolling(true);
+					} else if(index == 7 &&  slideinside2.realIndex == 0){
+						$.fn.fullpage.setAllowScrolling(true);
+					} else if(index == 10 && slideBNS.realIndex == 0){
+						$.fn.fullpage.setAllowScrolling(true);
+					}
+				}
+				else{
+					if(index == 6 && slideinside.realIndex == 3){
+						$.fn.fullpage.setAllowScrolling(true);
+					} else if(index == 7 &&  slideinside2.realIndex == 3){
+						$.fn.fullpage.setAllowScrolling(true);
+					} else if(index == 10 && slideBNS.realIndex == 1){
+						$.fn.fullpage.setAllowScrolling(true);
+					}
+				}
+		   });
+
+			$('.topBtn').on('click', function(){
+				$.fn.fullpage.moveTo(1, 2);
+			});
+	    });
+
+
+	</script>
 </body>
-<script type="text/javascript">
-
-	var slidesc2AdF = null,
-		slidesc3AdF = null,
-		slideReward = null,
-		slideReward2 = null;
-
-	$('.app_down_area .btn').on('click', function(){
-		var $this = $(this);
-		$this.toggleClass('active');
-		if($this.hasClass('active')){
-			$('.app_down_area .drop').fadeIn(0);
-		} else {
-			$('.app_down_area .drop').fadeOut(0);
-		}
-	});
-
-
-	var slideRewardImage = new Swiper(".slider-rewardImage", {
-		slidesPerView: 'auto',
-		slidesPerGroup : 1,
-		autoResize: true,
-		allowTouchMove: false,
-		loop: true,
-		autoplay: {    
-			delay: 3000,      
-			disableOnInteraction: false,  
-		},
-		navigation: {
-			nextEl: ".slide-next",
-			prevEl: ".slide-prev",
-		},
-	});
-
-	var slideRewardText = new Swiper(".slider-rewardText", {
-		slidesPerView: 1,
-		slidesPerGroup : 1,
-		autoResize: true,
-		centeredSlides: true,
-		allowTouchMove: false,
-		effect : 'fade',
-		autoplay: {    
-			delay: 3000,      
-			disableOnInteraction: false,  
-		},
-		loop: true,
-		navigation: {
-			nextEl: ".slide-next",
-			prevEl: ".slide-prev",
-		},
-	});
-
-	var slideRoadMap = new Swiper(".slider-roadmap", {
-		slidesPerView: 'auto',
-		slidesPerGroup : 1,
-		autoResize: true,
-		centeredSlides: false,
-	});
-
-	var slideDDP = new Swiper(".slider-ddp", {
-		slidesPerView: 'auto',
-		slidesPerGroup : 1,
-		autoResize: true,
-		centeredSlides: false,
-	});
-
-
-	var slideinside = new Swiper(".slider-reward", {
-		slidesPerView: 'auto',
-		slidesPerGroup : 1,
-		autoResize: true,
-		centeredSlides: false,		
-		effect : 'fade',
-		speed: 700,
-		pagination: {
-        	el: ".reward-pagination",
-        },
-	});
-
-	var slideinside2 = new Swiper(".slider-reward2", {
-		slidesPerView: 'auto',
-		slidesPerGroup : 1,
-		autoResize: true,
-		centeredSlides: false,
-		effect : 'fade',
-		speed: 700,
-		pagination: {
-        	el: ".reward2-pagination",
-        },
-	});
-
-	var slideBNS = new Swiper(".slider-BNS", {
-		slidesPerView: 1,
-		slidesPerGroup : 1,
-		autoResize: true,
-		centeredSlides: false,
-		spped : 400,
-		pagination: {
-        	el: ".swiper-pagination",
-        },
-	});
-
-
-	$( function(){
-		 $('.m_gnb li').on('click', function(){
-		 	$('.m_gnb li').removeClass('active');
-		 	$(this).addClass('active');
-		 	
-		 	$('.header .trigger').toggleClass('active');
-			$('.m_gnb').toggleClass('active');
-		 });
-	});
-
-
-	var fullpages = new fullPage('.container', {
-		timer : 700,
-	});
-
-	function movePage(index){
-		fullpages.indexMove(index);
-	}
-
-	var slideAD = new SlideCT('.slider-sc2AdF', {
-		
-	});
-
-	var slideAD2 = new SlideCT('.slider-sc3AdF', {
-		
-	});
-
-
-
-</script>
 </html>
