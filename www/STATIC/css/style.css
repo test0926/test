@@ -1733,12 +1733,14 @@ body,
         width: 100%;
         padding-top: 100px; 
         background-position: bottom -80px center;
+        justify-content: space-between;
     }
 
     .active .sc2-ad-area, 
     .active .sc3-ad-area {
         background-size: 733px;
     }
+
 
     .sc2-ad-area img, 
     .sc3-ad-area img{
@@ -2494,7 +2496,9 @@ body,
     #section10 .section_wrap .inner,
     #section11 .section_wrap .inner,
     #section12 .section_wrap .inner,
-    #section13 .section_wrap .inner {
+    #section13 .section_wrap .inner,
+    .sc2-ad-area, 
+    .sc3-ad-area {
         padding-top: 80px;
     }
     #section10 .section-head-area {
