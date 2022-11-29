@@ -85,8 +85,8 @@ $( function(){
 		$('.m_gnb').toggleClass('active');
 	});
 
-	$('.move-menu li').on('click', function(){
-		$('.m_gnb').toggleClass('active');
+	$('.move-menu li a').on('click', function(){
+		$('.m_gnb').removeClass('active');
 	});
 
 });

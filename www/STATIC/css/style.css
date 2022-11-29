@@ -803,7 +803,7 @@ body,
         -webkit-animation: rotate 1s infinite linear;
     }
 
-    .section_wrap.active .market_area .item .imgbox .arrow {
+    .section.active .market_area .item .imgbox .arrow {
         animation: arrow 500ms forwards linear;
         -webkit-animation: arrow 500ms forwards linear;
         animation-delay: 0.5s;
