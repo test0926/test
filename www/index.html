@@ -906,7 +906,26 @@
 				centeredSlides: false,
 			});
 
+			var slideAD = new SlideCT('.slider-sc2AdF', {
+			
+			});
 
+			var slideAD2 = new SlideCT('.slider-sc3AdF', {
+				
+			});
+
+
+			var fullpageMove = false;
+			var sliderMove = false;
+			var wheelMove = false;
+		    var wheelTimeout;
+		    function WheelTimer(timer){
+		    	wheelMove = true;
+		    	clearTimeout(wheelTimeout);
+		    	wheelTimeout = setTimeout(function (){
+				    wheelMove = false;
+				}, timer);
+		    }
 			var slideinside = new Swiper(".slider-reward", {
 				slidesPerView: 'auto',
 				slidesPerGroup : 1,
@@ -917,16 +936,17 @@
 				pagination: {
 		        	el: ".reward-pagination",
 		        },
-		        mousewheel: {
-			    	invert: false,
-			  	},
 		        on: {
-					slideChangeTransitionEnd: function (swiper) {
-						var realIndex = swiper.realIndex;
-						if(realIndex == 0 || realIndex == 3){
-							$.fn.fullpage.setAllowScrolling(true);
-						}
-					}
+		        	transitionStart: function (swiper) {
+		        		fullpageMove = false;
+		        		sliderMove = false;
+		        	},
+					transitionEnd: function (swiper) {
+		        		sliderMove = true;
+		        		if(swiper.realIndex == 0 || swiper.realIndex == (swiper.slides.length-1)){
+		        			fullpageMove = true;
+		        		}
+		        	},
 				},
 			});
 
@@ -940,16 +960,17 @@
 				pagination: {
 		        	el: ".reward2-pagination",
 		        },
-		        mousewheel: {
-			    	invert: false,
-			  	},
 		        on: {
-					slideChangeTransitionEnd: function (swiper) {
-						var realIndex = swiper.realIndex;
-						if(realIndex == 0 || realIndex == 3){
-							$.fn.fullpage.setAllowScrolling(true);
-						}
-					}
+					transitionStart: function (swiper) {
+		        		fullpageMove = false;
+		        		sliderMove = false;
+		        	},
+					transitionEnd: function (swiper) {
+		        		sliderMove = true;
+		        		if(swiper.realIndex == 0 || swiper.realIndex == (swiper.slides.length-1)){
+		        			fullpageMove = true;
+		        		}
+		        	},
 				},
 			});
 
@@ -962,16 +983,19 @@
 				pagination: {
 		        	el: ".swiper-pagination",
 		        },
-		        mousewheel: {
-			    	invert: false,
-			  	},
 		        on: {
-					slideChangeTransitionEnd: function (swiper) {
-						$.fn.fullpage.setAllowScrolling(true);
-					}
+		        	transitionStart: function (swiper) {
+		        		fullpageMove = false;
+		        		sliderMove = false;
+		        	},
+					transitionEnd: function (swiper) {
+		        		sliderMove = true;
+		        		if(swiper.realIndex == 0 || swiper.realIndex == (swiper.slides.length-1)){
+		        			fullpageMove = true;
+		        		}
+		        	},
 				},
 			});
-
 
 	        $('#fullpage').fullpage({
 	            verticalCentered: true,
@@ -980,57 +1004,231 @@
 	            scrollOverflow: true,
 	            onLeave: function(index, nextIndex, direction){
 	            	var windowWidth = $( window ).width();
+	            	sliderMove = false;
+	            	fullpageMove = false;
+
 	 				if(windowWidth > 1024) {
-						if(nextIndex == 6){
-							$.fn.fullpage.setAllowScrolling(false);
-						} else if(nextIndex == 7){
-							$.fn.fullpage.setAllowScrolling(false);
-						} else if(nextIndex == 10){
-							$.fn.fullpage.setAllowScrolling(false);
+						if(nextIndex == 6 || nextIndex == 7 || nextIndex == 10){
+							fullpageMove = false;
 						} else {
-							$.fn.fullpage.setAllowScrolling(true);
+							fullpageMove = true;
 						}
 	 				} else {
-	 					$.fn.fullpage.setAllowScrolling(true);
+	 					fullpageMove = true;
 	 				}
 				},
+				afterLoad: function(anchorLink, index){
+					if(index == 6 || index == 7 || index == 10){
+						fullpageMove = false;
+						sliderMove = true;
+					}
+				}
 	        });
 
-		    var slideAD = new SlideCT('.slider-sc2AdF', {
-			
-			});
 
-			var slideAD2 = new SlideCT('.slider-sc3AdF', {
-				
-			});
+			$(window).bind('wheel mousewheel DOMMouseScroll', function(event){
+			 	var pageIndex = $('.section.active').index()+1;
+		 		var sliede = pageIndex == 6 ? slideinside:
+		 					 pageIndex == 7 ? slideinside2:
+		 					 pageIndex == 10 ? slideBNS:false;
+			 	var timer = 1000;
 
+			 	pageMove();
 
-			$(window).bind('wheel mousewheel DOMMouseScroll', function(e){
-			 	var index = $('.section.active').index()+1;
-				if(e.originalEvent.wheelDelta/60 > 0) {
-					if(index == 6 && slideinside.realIndex == 0){
-						$.fn.fullpage.setAllowScrolling(true);
-					} else if(index == 7 &&  slideinside2.realIndex == 0){
-						$.fn.fullpage.setAllowScrolling(true);
-					} else if(index == 10 && slideBNS.realIndex == 0){
-						$.fn.fullpage.setAllowScrolling(true);
-					}
-				}
-				else{
-					if(index == 6 && slideinside.realIndex == 3){
-						$.fn.fullpage.setAllowScrolling(true);
-					} else if(index == 7 &&  slideinside2.realIndex == 3){
-						$.fn.fullpage.setAllowScrolling(true);
-					} else if(index == 10 && slideBNS.realIndex == 1){
-						$.fn.fullpage.setAllowScrolling(true);
-					}
-				}
+			 	if(!wheelMove){
+		    		if(pageIndex == 6 || pageIndex == 7 || pageIndex == 10){
+					 	if (event.originalEvent.deltaY < 0 ) {
+					 		if(sliede.realIndex == 0){
+					 			fullpageMove = true;
+					 			sliderMove = false;
+					 		} else {
+					 			fullpageMove = false;
+				    			swiperMove(sliede, sliede.realIndex-1, timer);
+					 		}
+					 		pageMove();
+						} else {
+							if(sliede.realIndex == (sliede.slides.length-1)){
+								fullpageMove = true;
+								sliderMove = false;
+					 		} else {
+					 			fullpageMove = false;
+								swiperMove(sliede, sliede.realIndex+1, timer);
+					 		}
+							pageMove();
+						}
+				 	}
+					WheelTimer(timer);
+		    	}
 		   });
 
 			$('.topBtn').on('click', function(){
 				$.fn.fullpage.moveTo(1, 2);
 			});
+
+			function pageMove(){
+	        	$.fn.fullpage.setAllowScrolling(fullpageMove);
+	        }
+
+	        function swiperMove(swiper, index, timer){
+	        	if(sliderMove){
+	        		swiper.slideTo(index, timer, false);
+	        	}
+	        }
 	    });
+
+			// var wheelMove = false;
+			// var slideMove = false;
+			// var slideinside = new Swiper(".slider-reward", {
+			// 	slidesPerView: 'auto',
+			// 	slidesPerGroup : 1,
+			// 	autoResize: true,
+			// 	centeredSlides: false,		
+			// 	effect : 'fade',
+			// 	speed: 700,
+			// 	pagination: {
+		 //        	el: ".reward-pagination",
+		 //        },
+		 //        on: {
+		 //        	slideChange: function (swiper) {
+		 //        		slideMove = false;
+		 //        	},
+		 //        	transitionStart: function (swiper) {
+		 //        		wheelMove = true;
+		 //        	},
+			// 		transitionEnd: function (swiper) {
+		 //        		wheelMove = false;
+		 //        		slideMove = true;
+		 //        	},
+		 //        	reachBeginning: function (swiper) {
+		 //        		// wheelMove = false;
+		 //        		slideMove = true;
+		 //        	},
+		 //        	reachEnd: function (swiper) {
+		 //        		slideMove = true;
+		 //        	},
+			// 	},
+			// });
+
+			// var slideinside2 = new Swiper(".slider-reward2", {
+			// 	slidesPerView: 'auto',
+			// 	slidesPerGroup : 1,
+			// 	autoResize: true,
+			// 	centeredSlides: false,
+			// 	effect : 'fade',
+			// 	speed: 700,
+			// 	pagination: {
+		 //        	el: ".reward2-pagination",
+		 //        },
+		 //        on: {
+			// 		transitionStart: function (swiper) {
+		 //        		wheelMove = true;
+		 //        	},
+			// 		transitionEnd: function (swiper) {
+		 //        		wheelMove = false;
+		 //        	},
+			// 	},
+			// });
+
+			// var slideBNS = new Swiper(".slider-BNS", {
+			// 	slidesPerView: 1,
+			// 	slidesPerGroup : 1,
+			// 	autoResize: true,
+			// 	centeredSlides: false,
+			// 	spped : 400,
+			// 	pagination: {
+		 //        	el: ".swiper-pagination",
+		 //        },
+		 //        on: {
+		 //        	transitionStart: function (swiper) {
+		 //        		wheelMove = true;
+		 //        	},
+			// 		transitionEnd: function (swiper) {
+		 //        		wheelMove = false;
+		 //        	},
+			// 	},
+			// });
+
+	  //       $('#fullpage').fullpage({
+	  //           verticalCentered: true,
+	  //           anchors: ['anchor1','anchor2','anchor3','anchor4','anchor5','anchor6','anchor7','anchor8','anchor9','anchor10','anchor111','anchor112','anchor113','anchor114'],
+	  //           menu: '.move-menu',
+	  //           scrollOverflow: true,
+	  //           onLeave: function(index, nextIndex, direction){
+	  //           	var windowWidth = $( window ).width();
+	  //           	slideMove = false;
+	 	// 			if(windowWidth > 1024) {
+			// 			if(nextIndex == 6 || nextIndex == 7 || nextIndex == 10){
+			// 				$.fn.fullpage.setAllowScrolling(false);
+			// 			} else {
+			// 				$.fn.fullpage.setAllowScrolling(true);
+			// 			}
+	 	// 			} else {
+	 	// 				$.fn.fullpage.setAllowScrolling(true);
+	 	// 			}
+			// 	},
+			// 	afterLoad: function(anchorLink, index){
+			// 		if(index == 6 || index == 7 || index == 10){
+			// 			slideMove = true;
+			// 		} else {
+			// 			slideMove = false;
+			// 		}
+			// 	}
+	  //       });
+
+	  //       function pageMove(boolean){
+	  //       	$.fn.fullpage.setAllowScrolling(boolean);
+	  //       }
+
+	  //       function swiperMove(swiper, index, timer){
+	  //       	swiper.slideTo(index, timer, false);
+	  //       }
+
+			// $(window).bind('wheel mousewheel DOMMouseScroll', function(event){
+			//  	var pageIndex = $('.section.active').index()+1;
+			//  	var timer = 1000;
+
+			//  	console.log(slideMove, 'slideMove')
+			//  	// slideinside, slideinside2, slideBNS
+			//  	if(pageIndex == 6 || pageIndex == 7 || pageIndex == 10){
+			//  		$.fn.fullpage.setAllowScrolling(false);
+
+			//  		var sliede = pageIndex == 6 ? slideinside:
+			//  					 pageIndex == 7 ? slideinside2:slideBNS;
+
+			// 	 	if (event.originalEvent.deltaY < 0 ) {
+		 //    			if(sliede.realIndex == 0){
+		 //    				$.fn.fullpage.setAllowScrolling(true);
+		 //    			} else {
+		 //    				$.fn.fullpage.setAllowScrolling(false);
+		 //    				if(slideMove){
+		 //    					if(!wheelMove){
+			//     					sliede.slideTo(sliede.realIndex-1, timer, false);
+			//     				}
+		 //    				} else {
+		 //    					// console.log('hold prev swiper');
+		 //    				}
+		 //    			}
+			// 		} else {
+			//  			if(sliede.realIndex == (sliede.slides.length-1)){
+		 //    				$.fn.fullpage.setAllowScrolling(true);
+		 //    			} else {
+		 //    				$.fn.fullpage.setAllowScrolling(false);
+		 //    				if(slideMove){
+		 //    					if(!wheelMove){
+			//     					sliede.slideTo(sliede.realIndex+1, timer, false);
+			//     				}
+		 //    				} else {
+		 //    					// console.log('hold next swiper');
+		 //    				}
+		 //    			}
+			// 		}
+			//  	}
+		 //   });
+
+			// $('.topBtn').on('click', function(){
+			// 	$.fn.fullpage.moveTo(1, 2);
+			// });
+	  //   });
 
 
 	</script>
