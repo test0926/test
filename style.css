@@ -356,13 +356,13 @@
         border-radius: 10px;
         word-break: break-all;
         font-size: 16px;
-        transition: all 0.3s;
-        -webkit-transition: all 0.3s;
+        text-align: left;
+        box-shadow: 0px 0px 2px rgba(0,0,0,0.25);
     }
     #digimonList .checkBOX:hover input + label {
-        background-color: rgb(133 121 255);
+        background-color: rgb(78, 65, 219);
         color: #fff;
-        font-weight: 700;
+        opacity: 0.8;
     }
 
 
@@ -416,6 +416,11 @@
 
     .evolution-list-area2 > li > div {
         margin-right: 20px;
+    }
+    .evolution-list-area2 > li > div:last-child .tit {
+        /*background: #4e4b6e;
+        color: #fff;
+        font-weight: 700;*/
     }
 
     .evolution-list-area2 p {
@@ -503,9 +508,13 @@
         padding-bottom: 15px;
     }
     #fastRoot > div > p {
+        font-size: 16px;
         font-weight: 500;
         margin: 5px;
-        margin-bottom: 0;
+        margin-bottom: 8px;
+    }
+    #fastRoot > div + div {
+        margin-top: 24px;
     }
     #fastRoot ul {
         list-style: none;
@@ -525,13 +534,17 @@
         font-weight: 500;
     }
     #fastRoot li p.diginone {
-        background-color: #eee;
-        color: #ccc;
+        background-color: #eee !important;
+        color: #ccc !important;
     }
      #fastRoot li p:hover {
-        background-color: rgb(78, 65, 219);
+        background-color: rgb(78, 65, 219) !important;
         color: #fff;
      }
+     #fastRoot .before_tree li p {
+        background-color: #8784a7;
+     }
+
      .updateName {
         cursor: pointer;
         font-weight: 500;
@@ -623,6 +636,7 @@
     }
     #digimonList .checkBOX input + label {
         font-size: 12px;
+        text-align: left;
     }
 
     .evolution-list-area2 .tit {
