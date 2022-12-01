@@ -16,10 +16,30 @@ const Evolution = {
 		'쿠네몬','팬텀몬','쥬레이몬','레이디데블몬','구미호몬','고래몬','네오데블몬','도사몬','스파이더몬','티라노몬','아이스몬','메가시드라몬',
 		'해바라기몬','올챙몬','플라이몬','왕개굴몬','개굴몬','치코몬','꼬마몬','브이몬','브이드라몬','에어로브이드라몬',
 		'모야몬','베지몬','베이더몬','데블드라몬',
-		'가비지몬','탱크몬','이블몬','디지타몬','리벨리몬'
+		'가비지몬','탱크몬','이블몬','디지타몬','리벨리몬',
+
+		'위자몬','델타몬','스나이몬','태스크몬','코에몬','고릴라몬','트리케라몬','에이프몬','에어드라몬','맘몬','플로라몬','패롯몬',	
+		'레드베지몬','펌프몬','기가드라몬','메가드라몬','미스티몬','배드퍼펫몬','푸치메라몬','블루메라몬',
+		'도도몬','도리몬','돌몬','돌가몬','헤라클레스캅테리몬','로제몬','세라피몬','오파니몬','바이킹몬',
+		'페닉스몬','메탈가루몬','워그레이몬','키위몬','브롯사몬','쁘띠몬'
 	],
 	tree : {
 		유년기 : {
+			도도몬 : {
+				type : '유년기2',
+				tree : ['돌몬'],
+				dataType : '',
+			},
+			도리몬 : {
+				type : '유년기1',
+				tree : ['도도몬'],
+				dataType : '',
+			},
+			푸치메라몬 : {
+				type : '유년기2',
+				tree : ['푸니몬','유라몬'],
+				dataType : '',
+			},
 			깜몬 : {
 				type : '유년기1',
 				tree : ['코로몬','토코몬','와냐몬','퍼그몬'],
@@ -73,7 +93,7 @@ const Evolution = {
 			},
 			뿔몬 : {
 				type : '유년기2',
-				tree : ['베타몬', '쉬라몬','고부리몬','피코데블몬','파피몬','에렉몬','쿠네몬'],
+				tree : ['베타몬', '쉬라몬','고부리몬','피코데블몬','파피몬','에렉몬','쿠네몬','코에몬'],
 				dataType : '',
 			},
 			모티몬 : {
@@ -83,17 +103,17 @@ const Evolution = {
 			},
 			둥실몬 : {
 				type : '유년기2',
-				tree : ['쉬라몬','베타몬','기자몬','올챙몬'],		
+				tree : ['쉬라몬','베타몬','기자몬','올챙몬','코에몬'],		
 				dataType : '',
 			},
 			어니몬 : {
 				type : '유년기2',
-				tree : ['팔몬','머슈몬','피요몬','피코데블몬','에렉몬','쿠네몬'],	
+				tree : ['팔몬','머슈몬','피요몬','피코데블몬','에렉몬','쿠네몬','플로라몬'],	
 				dataType : '',
 			},
 			시드몬 : {
 				type : '유년기2',
-				tree : ['머슈몬','베타몬','팔몬','고부리몬','레나몬','피요몬','쿠네몬'],
+				tree : ['머슈몬','베타몬','팔몬','고부리몬','레나몬','피요몬','쿠네몬','플로라몬'],
 				dataType : '',
 			},
 			토코몬 : {
@@ -108,7 +128,7 @@ const Evolution = {
 			},
 			와냐몬 : {
 				type : '유년기2',
-				tree : ['쉬라몬','캔들몬','플롯트몬','츄몬','레나몬','파피몬','톱니몬'],
+				tree : ['쉬라몬','캔들몬','플롯트몬','츄몬','레나몬','파피몬','톱니몬','코에몬'],
 				dataType : '',
 			},
 			퍼그몬 : {
@@ -138,6 +158,21 @@ const Evolution = {
 			},
 		},
 		성장기 : { 
+			플로라몬 : {
+				type : '성장기',
+				tree : ['베지몬','우드몬','해바라기몬','키위몬'],
+				dataType : 'Da',
+			},
+			돌몬 : {
+				type : '성장기',
+				tree : ['돌가몬'],
+				dataType : 'Vi',
+			},
+			코에몬 : {
+				type : '성장기',
+				tree : ['고릴라몬','에이프몬'],
+				dataType : 'Vi',
+			},
 			쿠네몬 : {
 				type : '성장기',
 				tree : ['쿠가몬','두리몬','캅테리몬','스파이더몬','플라이몬'],
@@ -160,7 +195,7 @@ const Evolution = {
 			},
 			피요몬 : {
 				type : '성장기',
-				tree : ['버드라몬','꼬끼몬','모야몬'],
+				tree : ['버드라몬','꼬끼몬','모야몬','에어드라몬'],
 				dataType : 'Va',
 			},
 			파닥몬 : {
@@ -175,7 +210,7 @@ const Evolution = {
 			},
 			텐타몬 : {
 				type : '성장기',
-				tree : ['캅테리몬','쿠가몬','스파이더몬'],
+				tree : ['캅테리몬','쿠가몬','스파이더몬','스나이몬'],
 				dataType : 'Va',
 			},
 			쉬라몬 : {
@@ -185,7 +220,7 @@ const Evolution = {
 			},
 			베타몬 : {
 				type : '성장기',
-				tree : ['시드라몬','쉘몬'],
+				tree : ['시드라몬','쉘몬','태스크몬'],
 				dataType : 'Vi',
 			},
 			아기벌몬 : {
@@ -195,7 +230,7 @@ const Evolution = {
 			},
 			머슈몬 : {
 				type : '성장기',
-				tree : ['프리지몬','우드몬','해바라기몬'],
+				tree : ['프리지몬','우드몬','해바라기몬','레드베지몬'],
 				dataType : 'Vi',
 			},
 			톱니몬 : {
@@ -220,7 +255,7 @@ const Evolution = {
 			},
 			캔들몬 : {
 				type : '성장기',
-				tree : ['메라몬','고스몬','소울몬'],
+				tree : ['메라몬','고스몬','소울몬','위자몬'],
 				dataType : 'Da',
 			},
 			기자몬 : {
@@ -235,7 +270,7 @@ const Evolution = {
 			},
 			가지몬 : {
 				type : '성장기',
-				tree : ['미구현'],
+				tree : ['델타몬'],
 				dataType : 'Vi',
 			},
 			케라몬 : {
@@ -265,6 +300,56 @@ const Evolution = {
 			},
 		},
 		성숙기 : { 
+			키위몬 : {
+				type : '성숙기',
+				tree : ['브롯사몬','뿌띠몬'],
+				dataType : 'Da',
+			},
+			돌가몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+				dataType : 'vi',
+			},
+			레드베지몬 : {
+				type : '성숙기',
+				tree : ['쥬레이몬'],
+				dataType : 'vi',
+			},
+			에어드라몬 : {
+				type : '성숙기',
+				tree : ['메가드라몬'],
+				dataType : 'va',
+			},
+			에이프몬 : {
+				type : '성숙기',
+				tree : ['맘몬'],
+				dataType : 'va',
+			},
+			고릴라몬 : {
+				type : '성숙기',
+				tree : ['맘몬'],
+				dataType : 'Da',
+			},
+			스나이몬 : {
+				type : '성숙기',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			태스크몬 : {
+				type : '성숙기',
+				tree : ['트리케라몬'],
+				dataType : 'Va',
+			},
+			위자몬 : {
+				type : '성숙기',
+				tree : ['미스티몬'],
+				dataType : 'Da',
+			},
+			델타몬 : {
+				type : '성숙기',
+				tree : ['데이터몬','스컬그레이몬'],
+				dataType : 'Vi',
+			},
 			그레이몬 : {
 				type : '성숙기',
 				tree : ['메탈그레이몬','스컬그레이몬'],
@@ -342,12 +427,12 @@ const Evolution = {
 			},
 			프리지몬 : {
 				type : '성숙기',
-				tree : ['퍼펫몬'],
+				tree : ['퍼펫몬','배드퍼펫몬'],
 				dataType : 'Va',
 			},
 			우드몬 : {
 				type : '성숙기',
-				tree : ['쥬레이몬'],
+				tree : ['쥬레이몬','펌프몬'],
 				dataType : 'Vi',
 			},
 			가드로몬 : {
@@ -362,7 +447,7 @@ const Evolution = {
 			},
 			메카노몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['데이터몬'],
 				dataType : 'Vi',
 			},
 			우가몬 : {
@@ -382,17 +467,17 @@ const Evolution = {
 			},
 			모노크로몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['트리케라몬'],
 				dataType : 'Da',
 			},
 			메라몬 : {
 				type : '성숙기',
-				tree : ['데드메라몬'],
+				tree : ['데드메라몬','블루메라몬'],
 				dataType : 'Da',
 			},
 			고스몬 : {
 				type : '성숙기',
-				tree : ['팬텀몬'],
+				tree : ['팬텀몬','펌프몬'],
 				dataType : 'Vi',
 			},
 			소울몬 : {
@@ -417,7 +502,7 @@ const Evolution = {
 			},
 			꼬끼몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['패롯몬'],
 				dataType : 'Da',
 			},
 			두리몬 : {
@@ -482,7 +567,7 @@ const Evolution = {
 			},
 			탱크몬 : {
 				type : '성숙기',
-				tree : ['미구현'],
+				tree : ['기가드라몬'],
 				dataType : 'Da',
 			},
 			이블몬 : {
@@ -492,9 +577,64 @@ const Evolution = {
 			},
 		},
 		완전체 : {
-			메탈그레이몬 : {
+			브롯사몬 : {
 				type : '완전체',
 				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			뿌띠몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			블루메라몬 : {
+				type : '완전체',
+				tree : ['메라몬'],
+				dataType : 'Da',
+			},
+			배드퍼펫몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Vi',
+			},
+			미스티몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			기가드라몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			메가드라몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			패롯몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Da',
+			},
+			펌프몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Vi',
+			},
+			맘몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			트리케라몬 : {
+				type : '완전체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			메탈그레이몬 : {
+				type : '완전체',
+				tree : ['워그레이몬'],
 				dataType : 'Va',
 			},
 			스컬그레이몬 : {
@@ -504,7 +644,7 @@ const Evolution = {
 			},
 			홀리엔젤몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['세라피몬'],
 				dataType : 'Va',
 			},
 			묘티스몬 : {
@@ -514,17 +654,17 @@ const Evolution = {
 			},
 			워가루몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['메탈가루몬'],
 				dataType : 'Da',
 			},
 			릴리몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['로제몬'],
 				dataType : 'Da',
 			},
 			가루다몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['페닉스몬'],
 				dataType : 'Va',
 			},
 			피콜몬 : {
@@ -534,12 +674,12 @@ const Evolution = {
 			},
 			엔젤우몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['오파니몬'],
 				dataType : 'Va',
 			},
 			아트라캅테리몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['헤라클레스캅테리몬'],
 				dataType : 'Va',
 			},
 			스콜피오몬 : {
@@ -549,7 +689,7 @@ const Evolution = {
 			},
 			쥬드몬 : {
 				type : '완전체',
-				tree : ['미구현'],
+				tree : ['바이킹몬'],
 				dataType : 'Va',
 			},
 			퍼펫몬 : {
@@ -642,6 +782,48 @@ const Evolution = {
 				tree : ['미구현'],
 				dataType : 'Vi',
 			},
+		},
+		궁극체 : {
+			워그레이몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			메탈가루몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			페닉스몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			바이킹몬: {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			오파니몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			세라피몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			로제몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
+			헤라클레스캅테리몬 : {
+				type : '궁극체',
+				tree : ['미구현'],
+				dataType : 'Va',
+			},
 		}
 	}
 };
@@ -649,31 +831,24 @@ const Evolution = {
 // 업데이트
 const update = {
 	date : '22.05.26',
-	digimon : {
-		리벨리몬 : {
-			tree : ['우가몬'],
-		},
-		디지타몬 : {
-			tree : ['우가몬','모야몬'],
-		},
-		가비지몬  : {
-			tree : ['레어몬'],
-		},
-		탱크몬 : {
-			tree : ['톱니몬'],
-		},
-		이블몬 : {
-			tree : ['피코데블몬'],
-		},
-	},
+	digimon : [
+		'위자몬','델타몬','스나이몬','태스크몬','코에몬','고릴라몬','트리케라몬','에이프몬','에어드라몬','맘몬','플로라몬','패롯몬',	
+		'레드베지몬','펌프몬','기가드라몬','메가드라몬','미스티몬','배드퍼펫몬','푸치메라몬','블루메라몬',
+		'도도몬','도리몬','돌몬','돌가몬','헤라클레스캅테리몬','로제몬','세라피몬','오파니몬','바이킹몬',
+		'페닉스몬','메탈가루몬','워그레이몬',
+	],
 };
 function updateDigimon(){
 	if(update){
 		$('.updateList .updates').text(update.date);
 		var html = '';
-		for (var key in update.digimon) {
+		for(var i = 0; i < update.digimon.length; i++){
+			key = update.digimon[i];
 			html += '<li><p class="updateName">'+key+'</p></li>';
 		}
+		// for (var key in update.digimon) {
+		// 	html += '<li><p class="updateName">'+key+'</p></li>';
+		// }
 		$('.updateList ul').html(html);
 	}
 }
@@ -803,16 +978,15 @@ $( function(){
 	// 업데이트 디지몬 정보
 	$(document).on('click', '.updateName', function(){
 		let name = $(this).text();
-		let arr = update.digimon[name].tree;
 		getDigimon(name);
 		var quickHtml = '';
-		for(var i = 0; i < arr.length; i++){
-			quickHtml += '<li><div>\
-								<p class="diginame">'+arr[i]+'</p>\
-							</div>';
-		}
+		// for(var i = 0; i < arr.length; i++){
+		// 	quickHtml += '<li><div>\
+		// 						<p class="diginame">'+arr[i]+'</p>\
+		// 					</div>';
+		// }
 		$('#digimon .name span:first-child').text(name);
-		$('#fastRoot .before_tree').html(quickHtml);
+		$('#fastRoot > div:first-child').hide();
 		// $('.evolution-list-area2').html('');
 		showList(false);
 	});
@@ -852,6 +1026,7 @@ $( function(){
 	//  디지몬 타입
 	function digimonType(name){
 		var data = digimonInfo(name);
+		console.log(name)
 		return data.dataType;
 	}
 
