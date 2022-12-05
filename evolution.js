@@ -37,7 +37,7 @@ const Evolution = {
 			},
 			푸치메라몬 : {
 				type : '유년기2',
-				tree : ['푸니몬','유라몬'],
+				tree : ['캔들몬','플롯트몬','울퉁몬','피코데블몬','파피몬'],
 				dataType : '',
 			},
 			깜몬 : {
@@ -67,12 +67,12 @@ const Evolution = {
 			},
 			유라몬 : {
 				type : '유년기1',
-				tree : ['코로몬','시드몬'],
+				tree : ['코로몬','시드몬','푸치메라몬'],
 				dataType : '',
 			},
 			푸니몬 : {
 				type : '유년기1',
-				tree : ['뿔몬','둥실몬','야옹몬'],
+				tree : ['뿔몬','둥실몬','야옹몬','푸치메라몬'],
 				dataType : '',
 			},
 			쿠라몬 : {
@@ -175,32 +175,38 @@ const Evolution = {
 			},
 			쿠네몬 : {
 				type : '성장기',
-				tree : ['쿠가몬','두리몬','캅테리몬','스파이더몬','플라이몬'],
+				tree : ['캅테리몬','스파이더몬','쿠가몬','두리몬','플라이몬'],
+				percent: [32.5,32.5,10,10,10],
 				dataType : 'Vi',
 			},
 			아구몬 : {
 				type : '성장기',
-				tree : ['그레이몬','다크티라노몬','티라노몬'],
+				tree : ['그레이몬','티라노몬','다크티라노몬'],
+				percent: [75,10,10],
 				dataType : 'Va',
 			},
 			파피몬 : {
 				type : '성장기',
 				tree : ['가루몬','두리몬'],
+				percent: [85,10],
 				dataType : 'Da',
 			},
 			팔몬 : {
 				type : '성장기',
-				tree : ['니드몬','해바라기몬','모야몬','베지몬'],
+				tree : ['니드몬','베지몬','모야몬','해바라기몬'],
+				percent: [37.5,37.5,10,10],
 				dataType : 'Da',
 			},
 			피요몬 : {
 				type : '성장기',
-				tree : ['버드라몬','꼬끼몬','모야몬','에어드라몬'],
+				tree : ['버드라몬','모야몬','꼬끼몬','에어드라몬'],
+				percent: [65,10,10,10],
 				dataType : 'Va',
 			},
 			파닥몬 : {
 				type : '성장기',
 				tree : ['엔젤몬','유니몬'],
+				percent: [85,10],
 				dataType : 'Da',
 			},
 			플롯트몬 : {
@@ -210,37 +216,44 @@ const Evolution = {
 			},
 			텐타몬 : {
 				type : '성장기',
-				tree : ['캅테리몬','쿠가몬','스파이더몬','스나이몬'],
+				tree : ['캅테리몬','스파이더몬','쿠가몬','스나이몬'],
+				percent: [37.5,37.5,10,10],
 				dataType : 'Va',
 			},
 			쉬라몬 : {
 				type : '성장기',
 				tree : ['원뿔몬','모털몬'],
+				percent: [47.5,47.5],
 				dataType : 'Va',
 			},
 			베타몬 : {
 				type : '성장기',
 				tree : ['시드라몬','쉘몬','태스크몬'],
+				percent: [42.5,42.5,10],
 				dataType : 'Vi',
 			},
 			아기벌몬 : {
 				type : '성장기',
 				tree : ['말벌몬','플라이몬'],
+				percent: [85,10],
 				dataType : 'Vi',
 			},
 			머슈몬 : {
 				type : '성장기',
 				tree : ['프리지몬','우드몬','해바라기몬','레드베지몬'],
+				percent: [65,10,10,10],
 				dataType : 'Vi',
 			},
 			톱니몬 : {
 				type : '성장기',
 				tree : ['가드로몬','켄터스몬','메카노몬', '탱크몬'],
+				percent: [28.34,28.33,28.33,10],
 				dataType : 'Vi',
 			},
 			피코데블몬 : {
 				type : '성장기',
-				tree : ['데블몬','데블드라몬','레이디데블몬','이블몬'],
+				tree : ['데블몬','이블몬','데블드라몬'],
+				percent: [42.5,42.5,10],
 				dataType : 'Vi',
 			},
 			고부리몬 : {
@@ -251,41 +264,49 @@ const Evolution = {
 			에렉몬 : {
 				type : '성장기',
 				tree : ['레오몬','모노크로몬','구미호몬'],
+				percent: [31.67,31.67,31.66],
 				dataType : 'Da',
 			},
 			캔들몬 : {
 				type : '성장기',
 				tree : ['메라몬','고스몬','소울몬','위자몬'],
+				percent: [37.5,37.5,10,10],
 				dataType : 'Da',
 			},
 			기자몬 : {
 				type : '성장기',
 				tree : ['시드라몬','쉘몬','다크티라노몬','데블드라몬'],
+				percent: [37.5,37.5,10,10],
 				dataType : 'Vi',
 			},
 			츄몬 : {
 				type : '성장기',
 				tree : ['워매몬','스카몬','레어몬','티라노몬'],
+				percent: [28.33,28.33,28.34,10],
 				dataType : 'Vi',
 			},
 			가지몬 : {
 				type : '성장기',
-				tree : ['델타몬'],
+				tree : ['델타몬','데블드라몬','다크티라노몬'],
+				percent: [75,10,10],
 				dataType : 'Vi',
 			},
 			케라몬 : {
 				type : '성장기',
 				tree : ['고스몬','소울몬'],
+				percent: [47.5,47.5],
 				dataType : '무속성',
 			},
 			울퉁몬 : {
 				type : '성장기',
 				tree : ['모노크로몬','아이스몬'],
+				percent: [47.5,47.5],
 				dataType : 'Da',
 			},
 			레나몬 : {
 				type : '성장기',
 				tree : ['구미호몬','가트몬'],
+				percent: [47.5,47.5],
 				dataType : 'Da',
 			},
 			올챙몬 : {
@@ -308,22 +329,22 @@ const Evolution = {
 			돌가몬 : {
 				type : '성숙기',
 				tree : ['미구현'],
-				dataType : 'vi',
+				dataType : 'Vi',
 			},
 			레드베지몬 : {
 				type : '성숙기',
 				tree : ['쥬레이몬'],
-				dataType : 'vi',
+				dataType : 'Vi',
 			},
 			에어드라몬 : {
 				type : '성숙기',
 				tree : ['메가드라몬'],
-				dataType : 'va',
+				dataType : 'Va',
 			},
 			에이프몬 : {
 				type : '성숙기',
 				tree : ['맘몬'],
-				dataType : 'va',
+				dataType : 'Va',
 			},
 			고릴라몬 : {
 				type : '성숙기',
@@ -600,7 +621,7 @@ const Evolution = {
 			미스티몬 : {
 				type : '완전체',
 				tree : ['미구현'],
-				dataType : 'Da',
+				dataType : 'Vi',
 			},
 			기가드라몬 : {
 				type : '완전체',
@@ -830,12 +851,12 @@ const Evolution = {
 
 // 업데이트
 const update = {
-	date : '22.05.26',
+	date : '22.12.01',
 	digimon : [
 		'위자몬','델타몬','스나이몬','태스크몬','코에몬','고릴라몬','트리케라몬','에이프몬','에어드라몬','맘몬','플로라몬','패롯몬',	
 		'레드베지몬','펌프몬','기가드라몬','메가드라몬','미스티몬','배드퍼펫몬','푸치메라몬','블루메라몬',
 		'도도몬','도리몬','돌몬','돌가몬','헤라클레스캅테리몬','로제몬','세라피몬','오파니몬','바이킹몬',
-		'페닉스몬','메탈가루몬','워그레이몬',
+		'페닉스몬','메탈가루몬','워그레이몬','키위몬','브롯사몬','쁘띠몬'
 	],
 };
 function updateDigimon(){
@@ -1026,7 +1047,7 @@ $( function(){
 	//  디지몬 타입
 	function digimonType(name){
 		var data = digimonInfo(name);
-		console.log(name)
+		// console.log(name)
 		return data.dataType;
 	}
 
@@ -1047,22 +1068,33 @@ $( function(){
 					</div></li>';
 
 			quickHtml = '<li><p class="diginone">미구현</p></li>';
-
 		} else { // 진화트리가 있을때
 			for(var i = 0; i < data.tree.length; i++){
 				var digitype = digimonType(data.tree[i]);
 				var color =  dataTypeColor(digitype);
-				quickHtml += '<li><div>\
-								<p class="diginame">'+data.tree[i]+'</p>\
+				if(data.percent) {
+					quickHtml += '<li><div>\
+									<p class="diginame">'+data.tree[i]+' <span class="percent">('+data.percent[i]+' %)</span></p>\
+								</div>';
+					html += '<li><div>\
+								<p class="tit">'+ type +'</p>\
+								<p class="digiInfo">\
+									<span class="diginame">'+data.tree[i]+'</span>\
+									<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
+								</p>\
 							</div>';
-
-				html += '<li><div>\
-							<p class="tit">'+ type +'</p>\
-							<p class="digiInfo">\
-								<span class="diginame">'+data.tree[i]+'</span>\
-								<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
-							</p>\
-						</div>';
+				} else {
+					quickHtml += '<li><div>\
+									<p class="diginame">'+data.tree[i]+'</p>\
+								</div>';
+					html += '<li><div>\
+								<p class="tit">'+ type +'</p>\
+								<p class="digiInfo">\
+									<span class="diginame">'+data.tree[i]+'</span>\
+									<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
+								</p>\
+							</div>';
+				}
 
 
 				var nextTree = digimonInfo(data.tree[i]);
@@ -1090,12 +1122,22 @@ $( function(){
 				var digitype = digimonType(data.tree[i]);
 				var color =  dataTypeColor(digitype);
 
-				html += '<div>\
-							<p class="digiInfo">\
-								<span class="diginame">'+data.tree[i]+'</span>\
-								<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
-							</p>\
-						</div>';
+				if(data.percent) {
+					html += '<div>\
+								<p class="digiInfo">\
+									<span class="diginame">'+data.tree[i]+'</span>\
+									<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
+									<span class="percent">'+data.percent[i]+'%</span>\
+								</p>\
+							</div>';
+				} else {
+					html += '<div>\
+								<p class="digiInfo">\
+									<span class="diginame">'+data.tree[i]+'</span>\
+									<span class="digitype" style="color:'+color+'">('+digitype+')</span>\
+								</p>\
+							</div>';
+				}
 
 			}
 			html += '</div>';

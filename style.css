@@ -462,8 +462,11 @@
         position: relative;
     }
     .evolution-list-area2 .digiInfo .digitype {
-        font-size: 12px;
-        letter-spacing: 1px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .evolution-list-area2 .digiInfo .percent {
+
     }
 
 
@@ -540,6 +543,11 @@
      #fastRoot li p:hover {
         background-color: rgb(78, 65, 219) !important;
         color: #fff;
+     }
+     #fastRoot li p .percent {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 1em;
      }
      #fastRoot .before_tree li p {
         background-color: #8784a7;
