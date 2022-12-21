@@ -813,7 +813,7 @@ const Evolution = {
 			메탈가루몬 : {
 				type : '궁극체',
 				tree : ['미구현'],
-				dataType : 'Va',
+				dataType : 'Da',
 			},
 			페닉스몬 : {
 				type : '궁극체',
