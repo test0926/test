@@ -671,6 +671,74 @@
 				<!--  section11 // -->
 
 				<!-- section12 -->
+
+				<style type="text/css">
+					/* section 12 */
+					#section12 { background: #ece4d4; }
+					#section12 .sectiton_title { margin-bottom: 80px; }
+					#section12 .sub_title { margin-top: 15px; }
+					#section12 .section_content { padding: 120px 20px 140px; }
+					.focus-video {  }
+					.focus-video .video { width: 100%; height: 100%; }
+					.focus-video video { width: 100%; height: 100%; object-position: center; object-fit: cover; vertical-align: top; }
+					.focus-swipe-container { position: relative; }
+					.focus-swipe { max-width: 1200px; margin: 0 auto; }
+					.focus-swipe .focus-slide { position: relative; overflow: hidden; height: 300px; cursor: pointer; }
+					.focus-swipe .focus-pagination { position: absolute; right: 0; top: 0; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 100; margin-right: 30px; opacity: 0; }
+					.focus-swipe .focus-pagination span { width: 10px; height: 10px; border-radius: 50%; background: #fff; opacity: .3; margin: 10px 0; cursor: pointer; }
+					.focus-swipe .focus-pagination span.active { opacity: 1; }
+					.focus-slide .content { position: absolute; left: 0; top: 0; width: 100%; padding: 120px 114px; color: #fff; }
+					.focus-slide .content h1 { font-size: 50px; }
+					.focus-slide .focus-fade { opacity: 0; }
+					.focus-slide .focus-fade .text { font-size: 19px; line-height: 1.6em; color: #d3d3d3; }
+					.focus-slide .focus-fade .img { position: relative; display: flex; justify-content: flex-start; align-items: center; height: 300px; }
+					.focus-slide .focus-fade .img1 { position: absolute; left: -40px; }
+					.focus-slide .focus-fade .img2 { display: flex; justify-content: flex-end; align-items: flex-end; flex-direction: column; } 
+					.focus-slide .focus-fade .gradient { display: flex; justify-content: flex-end; align-items: center; width: 460px; height: 60px; text-align: right; color: #222; font-size: 20px; font-weight: 700; padding: 0 40px; margin-top: 20px; margin-left: 100px; }
+					.focus-swipe .focus-slide,
+					.focus-slide .content,
+					.focus-swipe .focus-slide .focus-fade {  transition: all .5s; -webkit-transition: all .5s; }
+					.focus-swipe .focus-slide:nth-child(1).active { height: 629px; }
+					.focus-swipe .focus-slide:nth-child(2).active { height: 639px; }
+					.focus-swipe .focus-slide:nth-child(3).active { height: 639px; }
+					.focus-swipe .focus-slide:.active .content { padding: 100px 114px; }
+					.focus-swipe .focus-slide.active .focus-fade,
+					.focus-swipe .focus-slide.active .focus-pagination { opacity: 1; }
+
+					@media(max-width: 768px){
+						/* section12 */
+						#section12 { display: block; }
+						#section12 .section_content { padding: 16rem 0 0; }
+						#section12 .sectiton_title { margin-bottom: 8rem; }
+						#section12 .sub_title { margin-top: 4rem; }
+						.focus-swipe .bg { height: 100%; }
+						.focus-swipe .bg img { display: none; }
+						.focus-swipe .focus-slide:nth-child(2) .bg { background-image: url(../img/visual/section_12_mo_bg_02.png); background-size: 100%; }
+						.focus-swipe .focus-slide:nth-child(3) .bg {background-image: url(../img/visual/section_12_mo_bg_03.png); background-size: 100%; }
+						.focus-swipe .focus-slide { height: 40rem; }
+						.focus-slide .content { padding: 14.33rem 16rem; }
+						.focus-slide .content h1 { font-size: 6.66rem; }
+						.focus-slide .focus-fade .img { height: 50.66rem; flex-direction: column; justify-content: center; }
+						.focus-slide .focus-fade .img img { max-width: 100%; }
+						.focus-slide .focus-fade .text { font-size: 4rem; line-height: 1.5em; }
+						.focus-swipe .focus-pagination { display: none; }
+						.focus-video { height: 102.6rem; }
+						.focus-swipe .focus-slide { border: 0.4rem solid #941515; }
+						.focus-swipe .focus-slide:nth-child(1) { border-bottom: 0; }
+						.focus-swipe .focus-slide:nth-child(2) { border-top: 0; border-bottom: 0; }
+						.focus-swipe .focus-slide:nth-child(2) img { width: 90%; }
+						.focus-swipe .focus-slide:nth-child(3) { border-top: 0; }
+
+						.focus-swipe .focus-slide:nth-child(1).active { height: 102.6rem; }
+						.focus-swipe .focus-slide:nth-child(2).active { height: 102.6rem; }
+						.focus-swipe .focus-slide:nth-child(3).active { height: 129.33rem; }
+
+						.focus-swipe .focus-slide:nth-child(3) .img { height: auto; align-items: flex-start; width: 48rem; }
+						.focus-slide .focus-fade .img1 { position: relative; left: 0; width: 46.66rem; margin-top: 4.533rem; }
+						.focus-slide .focus-fade .img2 { margin-top: 2.66rem; }
+						.focus-slide .focus-fade .gradient { width: 100%; margin-left: 0; font-size: 3.2rem; padding: 0 2rem; height: 10rem; justify-content: center; margin-top: 4rem; margin-bottom: 6.66rem;  }
+					}
+				</style>
 				<section class="section" id="section12">
 					<div class="section_content">
 						<div class="sectiton_title" data-aos="fade-up">
