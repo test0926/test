@@ -13,6 +13,26 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+	<style type="text/css">
+		@font-face {
+		    font-family: 'SF_HambakSnow';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		:root {
+			--font-family-base : 'Noto Sans KR';
+			--font-family-title : 'SF_HambakSnow';
+		}
+		* { font-family: var(--font-family-base), sans-serif; }
+		h1,h2,h3,h4,h5,
+		h1 *,h2 *,h3 *,h4 *,h5 * { font-family: var(--font-family-title); letter-spacing: -2.5px; line-height: 1.2em; }
+
+		@media(max-width: 768px){
+
+			html { font-size: 0.976vmin; }
+		}
+	</style>
 	<main id="main">
 		<header id="header">
 			<div class="header-wrap">
@@ -372,67 +392,6 @@
 				</section>
 				<!--  section07 // -->
 				<!-- section08 -->
-				<style type="text/css">
-					/* section 08 */
-					#section08 { position: relative; overflow: visible; height: 8000px; }
-					#section08 .pin-spacer { padding-bottom: 0 !important; height: 100% !important; }
-					#section08 .video_wrap { position: absolute; inset: 0; width: 100%; z-index: 1; background: #000; }
-					#section08 .video_wrap .video { position: sticky; top: 0; }
-					#section08 .video_wrap video { width: 100%; }
-					#section08 .section_content { position: relative; z-index: 10; padding: 140px 0; }
-					#section08 .sectiton_title { margin-bottom: 80px; }
-
-					#section08 .section_row { display: flex; justify-content: flex-start; align-items: stretch; max-width: 1400px; height: 440px; margin: 0 auto; }
-					#section08 .section_row .text,
-					#section08 .section_row .img { flex: 0 1 50%; }
-					#section08 .section_row .text { display: flex; justify-content:center; align-items: flex-start; flex-direction: column; padding-left: 12%; }
-					#section08 .section_row .text h1 { font-size: 50px; letter-spacing: -1px; margin-bottom: 30px; }
-					#section08 .section_row .img { position: relative; display: flex; justify-content: center; align-items: center;  }
-
-					#section08 .section_row:nth-child(2) { background-color: #a01e1e;  }
-					#section08 .section_row:nth-child(3) { background-color: #f1efe3; }
-					#section08 .section_row:nth-child(4) { background-color: #cba15c; } 
-					#section08 .section_row:nth-child(2) .img { padding-left: 40px; padding-top: 30px; background-image: url(../img/visual/section_08_row01_bg.png); background-position: right top; }
-					#section08 .section_row:nth-child(4) .img { background-image: url(../img/visual/section_08_row03_bg.png); }
-
-					#section08 .section_row .stamp { position: absolute; }
-					#section08 .section_row .stamp:nth-child(1) { right: 100px; top: 40px; }
-					#section08 .section_row .stamp:nth-child(2) { left: 100px; bottom: 22px; }
-					#section08 .section_row .circle { display: flex; justify-content: center; align-items: center; flex-direction: column; width: 300px; height: 300px; border: 1px solid #cfa869; border-radius: 50%; }
-					#section08 .section_row .circle + .circle { margin-left: -24px;  }
-					#section08 .section_row .tag { position: relative; background: #000; color: #fff; font-size: 16px; font-weight: 500; padding: 7px 20px; border-radius: 30px; margin-bottom: -19px; z-index: 1; }
-					#section08 .section_row .type { font-size: 20px; font-weight: 500; line-height: 1em; margin-top: 19px; }
-
-					@media(max-width: 768px){
-
-						html { font-size: 0.976vmin; }
-						/* section08 */
-						#section08 { display: block; }
-						#section08 .aos-init {  transform: none !important; opacity: 1 !important; }
-						#section08 .section_content { padding: 24.33rem 8rem 16rem; }
-						#section08 .sectiton_title { margin-bottom: 8rem; }
-						#section08 .video_wrap .video { height: 100vh; }
-						#section08 .video_wrap video { height: 100%; object-fit: cover; object-position: center; }
-						#section08 .section_row { flex-direction: column; height: auto; }
-						#section08 .section_row .text{ padding: 10.66rem 0 0; flex-grow: 1; text-align: center; align-items: center; }
-						#section08 .section_row .text h1 { font-size: 8rem; margin-bottom: 3.2rem; }
-						#section08 .section_row .img { overflow: hidden; }
-						#section08 .section_row .stamp { width: 24rem; height: 24rem; top: 0; bottom: auto; }
-						#section08 .section_row .stamp img { width: 100%; }
-						#section08 .section_row .circle { width: 100%; height: 40rem; }
-						#section08 .section_row .type { font-size: 3.733rem; margin-top: 0.8rem; }
-						#section08 .section_row .tag { font-size: 2.933rem; }
-						#section08 .section_row .stamp:nth-child(1) { top: 6rem; right: 13.33rem; left: auto; }
-						#section08 .section_row .stamp:nth-child(2) { top: 6rem; left: 13.33rem; right: auto; }
-						#section08 .section_row:nth-child(2) .img { padding-left: 8rem; padding-top: 16.33rem; background-position: right -10rem top -6rem; }
-						#section08 .section_row:nth-child(2) .img > img { width: 100%; margin-bottom: -21.33rem; }
-						#section08 .section_row:nth-child(3) .img { padding: 7.33rem 5.33rem; }
-						#section08 .section_row:nth-child(3) .img img { width: 25.33rem; }
-						#section08 .section_row:nth-child(4) .img { background-size: cover; background-image: url(../img/visual/section_08_row03_mo_bg.png); }
-						#section08 .section_row:nth-child(4) .img img { width: 42.6rem; margin: 3.2rem; }
-						#section08 .section_row:nth-child(4) .text { padding-bottom: 8rem; }
-					}
-				</style>
 				<section class="section chapters" id="section08">
 					<div class="video_wrap">
 						<div class="video">
