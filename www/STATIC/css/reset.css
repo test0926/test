@@ -6,7 +6,8 @@ html[lang="en"] body, html *[lang="en"] body { font-size: 16px; }
 
 /* reset */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } 
+html { -ms-text-size-adjust: none; -webkit-text-size-adjust: none; } 
+body { -ms-text-size-adjust: none; -webkit-text-size-adjust: none; } 
 html, body, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
 abbr, address, big, cite, code, del, dfn, em, font, img, ins, q, s, samp, small, 
 strike, strong, sub, sup, tt, var, b, u, i, ul, ol, li, dl, dt, dd, table, caption,
